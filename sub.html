@@ -44,20 +44,20 @@
                             </div>
                             <div class="choice">
                                 <div class="_1">
-                                    <div class="chk1">
-                                        <input type="checkbox" name="" id="q1_chk1">
+                                    <div class="chk1 chk">
+                                        <input type="checkbox" name="" id="q1_chk1" class="check">
                                         <label for="q1_chk1"></label>
                                     </div>
-                                    <div class="chk2">
-                                        <input type="checkbox" name="" id="q1_chk2">
+									<div class="chk2 chk">
+										<input type="checkbox" name="" id="q1_chk2" class="check">
                                         <label for="q1_chk2"></label>
                                     </div>
-                                    <div class="chk3">
-                                        <input type="checkbox" name="" id="q1_chk3">
+									<div class="chk3 chk">
+										<input type="checkbox" name="" id="q1_chk3" class="check">
                                         <label for="q1_chk3"></label>
                                     </div>
-                                    <div class="chk4">
-                                        <input type="checkbox" name="" id="q1_chk4">
+									<div class="chk4 chk">
+										<input type="checkbox" name="" id="q1_chk4" class="check">
                                         <label for="q1_chk4"></label>
                                     </div>
                                 </div>
@@ -165,7 +165,20 @@
             tl2.to($(".goods-area"), 1, {alpha:1})
             tl2.play();
         },1500);
+		
+		$('.choice .check').on('click', function() {
+			var $parent = $(this).parent().parent();
+			var _this = $(this);
+			$parent.find('.chk').each(function() {
+				if($(this).find('.check').is(_this)) {
+					$(this).find('.check').attr('checked', true);
+				} else {
+					$(this).find('.check').attr('checked', false);
+				}
+			})
+		});
     });
+	
     </script>
 </body>
 </html>

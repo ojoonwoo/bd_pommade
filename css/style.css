@@ -552,15 +552,16 @@ html, body {
 	/* background: #fff; */
 	/* border: 2px solid #d7d7d7; */
 	/* margin-top: 40px; */
-	vertical-align: middle;
+	vertical-align: top;
+	margin-top: 1px;
 }
 .content.sub .content-wrap .inner .input-area .agree-box div input[type="checkbox"]:checked + label {
 	/* background: #3a0a4b; */
 	background: url(../images/sub_agree__checked.png) no-repeat center 0;
 	background-size: cover;
 	/* background: #fff; */
-	width: 17px;
-	height: 16px;
+	width: 15px;
+	height: 14px;
 }
 .content.sub .content-wrap .inner .input-area .agree-box .agree1 span:first-child {
 	margin-right: 7px;
@@ -618,6 +619,7 @@ html, body {
 	font-size: 11px;
 	color: #fff;
 }
+
 .content.info {
 	position: relative;
 	background: url(../images/info_bg.png) no-repeat center 0;
