@@ -664,6 +664,7 @@ html, body {
 	height: 752px;
 	margin: 0 auto;
 	text-align: center;
+	padding-bottom: 33px;
 }
 .content.info .content-wrap .inner .sub-title {
 	font-family: 'Noto Sans Korean';
@@ -671,7 +672,12 @@ html, body {
 	font-weight: 400;
 	font-size: 18px;
 	color: #c498d8;
-	padding: 59px 0 19px 0;
+	padding: 59px 0 6px 0;
+}
+.content.info .content-wrap .inner .neon-on-title {
+	position: absolute;
+	top: 69px;
+	left: 259px;
 }
 .content.info .content-wrap .inner .desc-title {
 	font-family: 'Noto Sans Korean';
@@ -717,8 +723,8 @@ html, body {
 	font-size: 15px;
 	color: #e4cbf0;
 }
-.content.info .content-wrap .inner .desc-text p:first-child {
-	padding-bottom: 4px;
+.content.info .content-wrap .inner .desc-text p:last-child {
+	padding-top: 2px;
 }
 .content.info .content-wrap .inner .desc-text .top-desc {
 	font-family: 'Noto Sans Korean';
@@ -727,4 +733,33 @@ html, body {
 	font-size: 16px;
 	color: #fff;
 	padding-bottom: 9px;
+}
+.content.info .content-wrap .inner .btn-area {
+	margin: 20px 0 40px 0;
+}
+.content.info .content-wrap .inner .btn-area button {
+	background: url(../images/info_exp_btn.png) no-repeat center 0;
+	background-size: cover;
+	width: 318px;
+	height: 90px;
+	font-family: 'Noto Sans Korean';
+	font-style: normal;
+	font-weight: 700;
+	font-size: 22px;
+	color: #fff;
+	padding-left: 21px;
+}
+.content.info .footer-wrap .inner {
+	width: 1000px;
+	/* height: 188px; */
+	margin: 0 auto;
+	padding: 34px 0 39px 88px;
+}
+.content.info .footer-wrap .inner p {
+	font-size: 12px;
+	color: #fff;
+}
+.content.info .footer-wrap .inner p:last-child {
+	font-size: 11px;
+	color: #fff;
 }
