@@ -257,6 +257,7 @@ html, body {
 	width: 865px;
 	height: 917px;
 	margin: 0 auto;
+	margin-bottom: 42px;
 }
 .content.sub .content-wrap .inner .request-area .mark {
 	position: absolute;
@@ -426,9 +427,171 @@ html, body {
 .content.sub .content-wrap .inner .input-area {
 	width: 865px;
 	margin: 0 auto;
+	text-align: center;
 }
 .content.sub .content-wrap .inner .input-area .input-box1 {
 	display: inline-block;
+	margin-right: 30px;
+}
+.content.sub .content-wrap .inner .input-area .input-box2 {
+	display: inline-block;
+}
+.content.sub .content-wrap .inner .input-area .input-box1 .row:first-child {
+	margin-bottom: 15px;
+}
+.content.sub .content-wrap .inner .input-area .input-box2 .row:last-child {
+	text-align: right;
+}
+.content.sub .content-wrap .inner .input-area .input-box2 .row:first-child {
+	margin-bottom: 15px;
+}
+.content.sub .content-wrap .inner .input-area .input-box1 .row .label {
+	display: inline-block;
+	font-family: 'Noto Sans Korean';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 17px;
+	color: #eabdff;
+	margin-right: 25px;
+}
+.content.sub .content-wrap .inner .input-area .input-box2 .row .label {
+	display: inline-block;
+	font-family: 'Noto Sans Korean';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 17px;
+	color: #eabdff;
+	margin-right: 25px;
+}
+.content.sub .content-wrap .inner .input-area .input-box1 .row .input {
+	display: inline-block;
+	font-size: 17px;
+	color: #eabdff;
+}
+.content.sub .content-wrap .inner .input-area .input-box2 .row .input {
+	display: inline-block;
+	font-size: 17px;
+	color: #eabdff;
+}
+.content.sub .content-wrap .inner .input-area .input-box1 .row .input input {
+	font-family: 'Noto Sans Korean';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 17px;
+	color: #eabdff;
+	width: 257px;
+	height: 37px;
+	background: #653c78;
+}
+.content.sub .content-wrap .inner .input-area .input-box2 .row .input input {
+	font-family: 'Noto Sans Korean';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 17px;
+	color: #eabdff;
+	width: 257px;
+	height: 37px;
+	background: #653c78;
+}
+.content.sub .content-wrap .inner .input-area .input-box1 .row .input.tel input {
+	font-family: 'Noto Sans Korean';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 17px;
+	color: #eabdff;
+	width: 74px;
+	height: 37px;
+	background: #653c78;
+	margin-right: 1px;
+}
+.content.sub .content-wrap .inner .input-area .input-box1 .row .input.tel input:last-child {
+	width: 75px;
+	margin-right: 0px;
+}
+.content.sub .content-wrap .inner .input-area .input-box2 .row .input.addr input {
+	font-family: 'Noto Sans Korean';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 17px;
+	color: #eabdff;
+	width: 207px;
+	height: 37px;
+	background: #653c78;
+}
+.content.sub .content-wrap .inner .input-area .input-box2 .row .input.addr button {
+	background: #dcd0e8;
+	width: 41px;
+	height: 37px;
+	vertical-align: top;
+	margin-left: 5px;
+}
+.content.sub .content-wrap .inner .input-area .agree-box {
+	font-family: 'Noto Sans Korean';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 12px;
+	color: #fff;
+	margin-top: 29px;
+}
+.content.sub .content-wrap .inner .input-area .agree-box div {
+	display: inline-block;
+}
+.content.sub .content-wrap .inner .input-area .agree-box div:first-child {
+	margin-right: 32px;
+}
+.content.sub .content-wrap .inner .input-area .agree-box div input[type="checkbox"] {
+	display: none;
+}
+.content.sub .content-wrap .inner .input-area .agree-box div input[type="checkbox"] + label {
+	display: inline-block;
+	cursor: pointer;
+	background: url(../images/sub_agree__unchecked.png) no-repeat center 0;
+	background-size: cover;
+	width: 15px;
+	height: 14px;
+	/* background: #fff; */
+	/* border: 2px solid #d7d7d7; */
+	/* margin-top: 40px; */
+	vertical-align: top;
+	margin-top: 1px;
+}
+.content.sub .content-wrap .inner .input-area .agree-box div input[type="checkbox"]:checked + label {
+	/* background: #3a0a4b; */
+	background: url(../images/sub_agree__checked.png) no-repeat center 0;
+	background-size: cover;
+	/* background: #fff; */
+	width: 15px;
+	height: 14px;
+}
+.content.sub .content-wrap .inner .input-area .agree-box .agree1 span:first-child {
+	margin-right: 7px;
+}
+.content.sub .content-wrap .inner .input-area .agree-box .agree2 span:first-child {
+	margin-right: 7px;
+}
+.content.sub .content-wrap .inner .input-area .agree-box .agree1 span:last-child {
+	margin-left: 11px;
+}
+.content.sub .content-wrap .inner .input-area .agree-box .agree2 span:last-child {
+	margin-left: 11px;
+}
+.content.sub .content-wrap .inner .input-area .agree-box .agree-text {
+	margin-top: 9px;
+}
+.content.sub .content-wrap .inner .input-area .btn-box {
+	margin: 20px 0 59px 0;
+}
+.content.sub .content-wrap .inner .input-area .btn-box button {
+	font-family: 'Noto Sans Korean';
+	font-style: normal;
+	font-weight: 700;
+	font-size: 22px;
+	color: #fff;
+	background: url(../images/sub_submit_btn.png) no-repeat center 0;
+	background-size: cover;
+	width: 221px;
+	height: 90px;
+	padding-left: 26px;
 }
 
 .content.sub .content-wrap .inner .share-area .fb {
@@ -446,7 +609,7 @@ html, body {
 	width: 1000px;
 	/* height: 188px; */
 	margin: 0 auto;
-	padding: 67px 0 39px 88px;
+	padding: 47px 0 39px 88px;
 }
 .content.sub .footer-wrap .inner p {
 	font-size: 12px;
@@ -455,4 +618,115 @@ html, body {
 .content.sub .footer-wrap .inner p:last-child {
 	font-size: 11px;
 	color: #fff;
+}
+
+.content.info {
+	position: relative;
+	background: url(../images/info_bg.png) no-repeat center 0;
+	background-size: auto;
+	width: 100%;
+}
+.content.info .header-wrap {
+	height: 116px;
+}
+.content.info .header-wrap .inner {
+	width: 1000px;
+	margin: 0 auto;
+	padding: 48px 0 36px 0;
+}
+.content.info .header-wrap .inner h1 {
+	padding-left: 70px;
+}
+.content.info .notice-wrap {
+	background: url(../images/notice_bg.png) no-repeat center 0;
+	background-size: cover;
+	height: 67px;
+}
+.content.info .notice-wrap .inner {
+	width: 1000px;
+	margin: 0 auto;
+	padding: 20px 0 20px 0;
+	text-align: center;
+}
+.content.info .notice-wrap .inner img {
+	margin-left: 26px;
+}
+.content.info .notice-wrap .inner span {
+	font-size: 22px;
+	font-family: 'Noto Sans Korean';
+	font-style: normal;
+	font-weight: 500;
+	color: #fff;
+	display: inline-block;
+	margin: 7px 0 0 7px;
+}
+.content.info .content-wrap .inner {
+	position: relative;
+	width: 1000px;
+	height: 752px;
+	margin: 0 auto;
+	text-align: center;
+}
+.content.info .content-wrap .inner .sub-title {
+	font-family: 'Noto Sans Korean';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 18px;
+	color: #c498d8;
+	padding: 59px 0 19px 0;
+}
+.content.info .content-wrap .inner .desc-title {
+	font-family: 'Noto Sans Korean';
+	font-style: normal;
+	font-weight: 700;
+	font-size: 18px;
+	color: #fff;
+	padding: 23px 0 19px 0;
+	letter-spacing: 1.4px;
+}
+.content.info .content-wrap .inner .event-date {
+	width: 236px;
+	height: 26px;
+	border: solid 1px #fff;
+	margin: 0 auto;
+}
+.content.info .content-wrap .inner .event-date span {
+	font-family: 'Noto Sans Korean';
+	font-style: normal;
+	font-weight: 500;
+	font-size: 16px;	
+	color: #fff;
+	margin-top: 4px;
+	display: inline-block;
+}
+.content.info .content-wrap .inner .sale-image {
+	padding: 25px 0 0 0;
+}
+.content.info .content-wrap .inner .sale-image .sale-text {
+	position: relative;
+	z-index: 2;
+}
+.content.info .content-wrap .inner .sale-image .store {
+	margin-top: -96px;
+}
+.content.info .content-wrap .inner .desc-text {
+	padding-top: 30px;
+}
+.content.info .content-wrap .inner .desc-text p {
+	font-family: 'Noto Sans Korean';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 15px;
+	color: #e4cbf0;
+}
+.content.info .content-wrap .inner .desc-text p:first-child {
+	padding-bottom: 4px;
+}
+.content.info .content-wrap .inner .desc-text .top-desc {
+	font-family: 'Noto Sans Korean';
+	font-style: normal;
+	font-weight: 700;
+	font-size: 16px;
+	color: #fff;
+	padding-bottom: 9px;
 }
