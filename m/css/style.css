@@ -260,6 +260,14 @@ html, body {
 	-webkit-box-sizing: border-box;
 	box-sizing: border-box;
 }
+.content.sub .request-form .inner > .obj {
+	position: absolute;
+	left: 10px;
+	top: -7px;
+	width: 48px;
+	height: 46px;
+	background: url(../images/sub_form_obj.png) 0 0 / cover no-repeat;
+}
 .content.sub .request-form .inner {
 	padding: 39px 15px 18px;
 }
@@ -566,5 +574,8 @@ input[type="text"]:focus {
 	}
 	.content.sub .request-form .box .check-wrap .check + label {
 		margin-right: 8px;
+	}
+	.content.sub .receipt-form .agree-wrap .msg br {
+		display: none;
 	}
 }
