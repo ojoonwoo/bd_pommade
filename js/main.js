@@ -87,120 +87,6 @@ $(function(){
 	};
 	bato.popup.bind();
 
-//	var tap = {
-//		bind: function() {
-//			$(document).on('mouseover', '[data-tap-target]', function() {
-//				tap.show($(this));
-//			});
-//		},
-//		show: function(target) {
-//			var targetIdx = target.data('tap-target');
-//			$("[data-tap-target]").each(function() {
-//				var imgSrcs = $(this).find('img').attr('src').replace('_on', '_off');
-//				$(this).find('img').attr('src', imgSrcs);
-//			});
-//			target.siblings().removeClass('is-active');
-//			$("[data-tap-content]").removeClass('is-active');
-//			
-//			
-//
-//			target.addClass('is-active');
-//			$("[data-tap-content='"+targetIdx+"']").addClass('is-active');
-//			target.find('img').attr('src', './images/tap_btn_'+targetIdx+'_on.png');
-//			
-//			switch (target.data('tapTarget')) {
-//				case 1:
-//					$('.tab._2').css({
-//						background: '#fdf6f7',
-//						background: 'rgba(255, 255, 255, 0.6)'
-//					});
-//					$('.tab._3').css({
-//						background: '#fbeff2',
-//						background: 'rgba(255, 255, 255, 0.3)'
-//					});
-//					break;
-//				case 2:
-//					$('.tab._1').css({
-//						background: '#fdf6f7',
-//						background: 'rgba(255, 255, 255, 0.6)'
-//					});
-//					$('.tab._3').css({
-//						background: '#fbeff2',
-//						background: 'rgba(255, 255, 255, 0.3)'
-//					});
-//					break;
-//				case 3:
-//					$('.tab._1').css({
-//						background: '#fbeff2',
-//						background: 'rgba(255, 255, 255, 0.3)'
-//					});
-//					$('.tab._2').css({
-//						background: '#fdf6f7',
-//						background: 'rgba(255, 255, 255, 0.6)'
-//					});
-//					break;
-//			}
-//			target.css('background-color', '#ffffff');
-//		}
-//	}
-//	tap.bind();
-	
-//	var share = {
-//		bind: function() {
-//			Kakao.init('8bd4e13e1a2a0d80bbd60d994b744ce1');
-//
-//			$(document).on('click', '[data-share-target]', function() {
-//
-//				share.open($(this));
-//			});
-//		},
-//		open: function(target) {
-//			// 공유 로직 들어 가야 함
-//			// console.log(target.data("share-target"));
-//			if (target.data("share-target") == "fb")
-//			{
-//				var newWindow = window.open('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent('http://routine.itsskin.com/index.php?media=fb'),'sharer','toolbar=0,status=0,width=600,height=325');
-//
-//				$.ajax({
-//					type   : "POST",
-//					async  : false,
-//					url    : "./main_exec.php",
-//					data:{
-//						"exec"          : "insert_share_info",
-//						"sns_media"     : target.data("share-target")
-//					}
-//				});
-//	
-//			} else if (target.data("share-target") == "ks") {
-//				Kakao.Story.share({
-//					url: 'http://routine.itsskin.com/index.php?media=ks'
-//				});
-//				$.ajax({
-//					type   : "POST",
-//					async  : false,
-//					url    : "./main_exec.php",
-//					data:{
-//						"exec" : "insert_share_info",
-//						"sns_media" : target.data("share-target")
-//					}
-//				});
-//	
-//			}else{
-//				var newWindow = window.open('http://blog.naver.com/LinkShare.nhn?url=http://routine.itsskin.com/index.php?media=blog','sharer','toolbar=0,status=0,width=600,height=325');
-//				$.ajax({
-//					type   : "POST",
-//					async  : false,
-//					url    : "./main_exec.php",
-//					data:{
-//						"exec" : "insert_share_info",
-//						"sns_media" : target.data("share-target")
-//					}
-//				});
-//			}
-//		}
-//	}
-//	share.bind();
-	
 	$('#mb_mail3').on('change', function() {
 		var val = $(this).val();
 		if(val == '') {
@@ -210,127 +96,6 @@ $(function(){
 		} else {
 			$('#mb_mail2').val(val);	
 		}
-	});
-	$(".btn-result").on("click", function(){
-		var mb_name 	= $("#mb_name").val();
-		var mb_phone1 	= $("#mb_phone1").val();
-		var mb_phone2 	= $("#mb_phone2").val();
-		var mb_phone3 	= $("#mb_phone3").val();
-		var mb_mail1	= $("#mb_mail1").val();
-		var mb_mail2	= $("#mb_mail2").val();
-		var mb_addr1 	= $("#mb_addr1").val();
-		var mb_addr2 	= $("#mb_addr2").val();
-		var mb_phone 	= mb_phone1 + mb_phone2 + mb_phone3;
-		var mb_mail		= mb_mail1 + "@" + mb_mail2;
-
-		if ($(".check-wrapper .check").hasClass("is-checked") === false) {
-			alert("나에게 맞는 PT크림을 선택해주세요");
-			return false;
-		}
-		// console.log($('.mb_type').val());
-		if (mb_name == "") {
-			alert("이름을 입력해 주세요.");
-			$("#mb_name").focus();
-			return false;
-		}
-
-		if (mb_phone1 == "") {
-			alert("전화번호를 입력해 주세요.");
-			$("#mb_phone1").focus();
-			return false;
-		}
-		
-		if (mb_phone2 == "") {
-			alert("전화번호를 입력해 주세요.");
-			$("#mb_phone2").focus();
-			return false;
-		}
-		if (mb_phone3 == "") {
-			alert("전화번호를 입력해 주세요.");
-			$("#mb_phone3").focus();
-			return false;
-		}
-		if (mb_addr1 == "") {
-			alert("주소를 입력해 주세요.");
-			return false;
-		}
-		if (mb_addr2 == "") {
-			alert("상세주소를 입력해 주세요.");
-			$("#mb_addr2").focus();
-			return false;
-		}
-		if (mb_mail1 == "") {
-			alert("메일주소를 입력해주세요");
-		}
-		if (mb_mail2 == "") {
-			alert("메일주소를 입력해주세요");
-		}
-
-		if ($("#agree1").is(":checked") === false)
-		{
-			alert('개인정보 수집 및 이용약관에 동의하셔야만 이벤트 참여가 가능합니다.');
-			return false;
-		}
-
-		if ($("#agree2").is(":checked") === false)
-		{
-			alert('개인정보 취급 위탁 약관에 동의하셔야만 이벤트 참여가 가능합니다.');
-			return false;
-		}
-
-		$.ajax({
-			type:"POST",
-			data:{
-				"exec"				: "insert_member_info",
-				"mb_name"			: mb_name,
-				"mb_phone"			: mb_phone,
-				"mb_mail"			: mb_mail,
-				"mb_addr1"			: mb_addr1,
-				"mb_addr2"			: mb_addr2,
-				"mb_type"			: pt_type
-			},
-			url: "./main_exec.php",
-			success: function(response){
-				if (response == "Y")
-				{
-					bato.popup.close($("#pt-pass"));
-					console.log(pt_type);
-					$("#rs_name").html(mb_name);
-					if (pt_type == "light")
-					{
-						$(".your-status").html("라이트 PT를 선택한 당신은 <b>계절성 건성</b>입니다");
-						$(".need").html("아토덤 크림으로 스킨 PT가 필요합니다");
-						$("#rs_type").html("라이트 PT");
-						$("#rs_status").html("계절성 건성");
-						$("#rs_goods").html("아토덤 크림");
-						$("#rs_goods_img").attr("src","./images/popup_atoderm_cream.png");
-					}else if (pt_type == "medium"){
-						$(".your-status").html("미디움 PT를 선택한 당신은 <b>만성 건성</b>입니다");
-						$(".need").html("아토덤 PP밤으로 스킨 PT가 필요합니다");
-						$("#rs_type").html("미디움 PT");
-						$("#rs_status").html("만성 건성");
-						$("#rs_goods").html("아토덤 PP밤");
-						$("#rs_goods_img").attr("src","./images/popup_atoderm_pp.png");
-					}else{
-						$(".your-status").html("헤비 PT를 선택한 당신은 <b>문제성 건성</b>입니다");
-						$(".need").html("아토덤 인텐시브밤으로 스킨 PT가 필요합니다");
-						$("#rs_type").html("헤비 PT");
-						$("#rs_status").html("문제성 건성");
-						$("#rs_goods").html("아토덤 인텐시브밤");
-						$("#rs_goods_img").attr("src","./images/popup_atoderm_intensive.png");
-					}
-	
-					bato.popup.show($("#pt-result"));
-				}else if (response == "D") {
-					alert("이미 참여하셨습니다. 감사합니다!");
-					location.href = "index.php";
-				}else{
-					alert("참여자가 많습니다. 다시시도해 주세요!");
-					location.reload();
-				}
-			}
-		});
-	
 	});
 
 	$(".search").on("click", function(){
@@ -364,11 +129,120 @@ $(function(){
 				// 우편번호와 주소 정보를 해당 필드에 넣는다.
 				// document.getElementById('mb_zipcode').value = data.zonecode; //5자리 새우편번호 사용
 				document.getElementById('mb_addr1').value 	= "(" + data.zonecode + ") " + fullRoadAddr;
+				search_zipcode 	= data.zonecode;
+				search_addr1 	= fullRoadAddr;
 			}
 		}).open();	
 	});
 });
 
+function info_submit() {
+	var claim_goods 	= $("#claim_goods").val();
+	var mb_name 		= $("#mb_name").val();
+	var mb_phone1 		= $("#mb_phone1").val();
+	var mb_phone2 		= $("#mb_phone2").val();
+	var mb_phone3 		= $("#mb_phone3").val();
+	// var mb_mail1		= $("#mb_mail1").val();
+	// var mb_mail2		= $("#mb_mail2").val();
+	var mb_addr1 		= $("#mb_addr1").val();
+	var mb_addr2 		= $("#mb_addr2").val();
+	var mb_phone 		= mb_phone1 + mb_phone2 + mb_phone3;
+	// var mb_mail			= mb_mail1 + "@" + mb_mail2;
+
+	if ($(".check").is(":checked") === false) {
+		alert("기존에 사용했던 시카제품의 불만족스런 이유를 선택해 주세요");
+		return false;
+	}
+
+	if (claim_goods == "") {
+		alert("불만족스런 시카제품을 입력해주세요.");
+		$("#claim_goods").focus();
+		return false;
+	}
+
+	if (mb_name == "") {
+		alert("이름을 입력해 주세요.");
+		$("#mb_name").focus();
+		return false;
+	}
+
+	if (mb_phone1 == "") {
+		alert("전화번호를 입력해 주세요.");
+		$("#mb_phone1").focus();
+		return false;
+	}
+	
+	if (mb_phone2 == "") {
+		alert("전화번호를 입력해 주세요.");
+		$("#mb_phone2").focus();
+		return false;
+	}
+	if (mb_phone3 == "") {
+		alert("전화번호를 입력해 주세요.");
+		$("#mb_phone3").focus();
+		return false;
+	}
+	if (mb_addr1 == "") {
+		alert("주소를 입력해 주세요.");
+		return false;
+	}
+	if (mb_addr2 == "") {
+		alert("상세주소를 입력해 주세요.");
+		$("#mb_addr2").focus();
+		return false;
+	}
+	// if (mb_mail1 == "") {
+	// 	alert("메일주소를 입력해주세요");
+	// }
+	// if (mb_mail2 == "") {
+	// 	alert("메일주소를 입력해주세요");
+	// }
+
+	if ($("#mb_agree1").is(":checked") === false)
+	{
+		alert('개인정보 수집 및 이용약관에 동의하셔야만 이벤트 참여가 가능합니다.');
+		return false;
+	}
+
+	if ($("#mb_agree2").is(":checked") === false)
+	{
+		alert('개인정보 취급 위탁 약관에 동의하셔야만 이벤트 참여가 가능합니다.');
+		return false;
+	}
+
+	$.ajax({
+		type:"POST",
+		data:{
+			"exec"				: "insert_member_info",
+			"claim_goods"		: claim_goods,
+			"mb_name"			: mb_name,
+			"mb_phone"			: mb_phone,
+			// "mb_mail"			: mb_mail,
+			"mb_zipcode"		: search_zipcode,
+			"mb_addr1"			: search_addr1,
+			"mb_addr2"			: mb_addr2,
+			"claimType"			: claimType
+		},
+		url: "./main_exec.php",
+		success: function(response){
+			console.log(response);
+			if (response == "Y")
+			{
+				// bato.popup.close($("#pt-pass"));
+				// console.log(pt_type);
+				// $("#rs_name").html(mb_name);
+
+				bato.popup.show($("#pt-result"));
+			}else if (response == "D") {
+				alert("이미 참여하셨습니다. 감사합니다!");
+				location.href = "index.php";
+			}else{
+				alert("참여자가 많습니다. 다시시도해 주세요!");
+				location.reload();
+			}
+		}
+	});
+}
 
 function only_num(obj)
 {
@@ -494,25 +368,9 @@ function confirm_close()
 		location.href = "index.php";
 }
 
-function pt_draw()
+function go_link(url)
 {
-	$.ajax({
-		type:"POST",
-		data:{
-			"exec"				: "draw_winner"
-		},
-		url: "./main_exec.php",
-		success: function(response){
-			console.log(response);
-			bato.popup.close($("#pt-success"));
-
-			if (response == "Y")
-				bato.popup.show($("#pt-pass"));
-			else
-				bato.popup.show($("#pt-retry"));
-
-		}
-	});
+	location.href = url;
 }
 
 function sns_share(media, flag)

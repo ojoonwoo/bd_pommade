@@ -1,16 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<link rel="stylesheet" href="./css/reset.css">
-	<link rel="stylesheet" href="./css/style.css">
-    <script src="./js/jquery-1.11.2.min.js"></script>
-    <script src="./js/main.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"></script>
-    <title>Document</title>
-</head>
+<?
+    include_once "head.php";
+?>
 <body>
     <div class="container">
         <div class="content sub">
@@ -46,19 +36,19 @@
                             <div class="choice">
                                 <div class="_1">
                                     <div class="chk1 chk">
-                                        <input type="checkbox" name="" id="q1_chk1" class="check">
+                                        <input type="checkbox" name="q1_chk" id="q1_chk1" class="check" data-value="1">
                                         <label for="q1_chk1"></label>
                                     </div>
 									<div class="chk2 chk">
-										<input type="checkbox" name="" id="q1_chk2" class="check">
+										<input type="checkbox" name="q1_chk" id="q1_chk2" class="check" data-value="2">
                                         <label for="q1_chk2"></label>
                                     </div>
 									<div class="chk3 chk">
-										<input type="checkbox" name="" id="q1_chk3" class="check">
+										<input type="checkbox" name="q1_chk" id="q1_chk3" class="check" data-value="3">
                                         <label for="q1_chk3"></label>
                                     </div>
 									<div class="chk4 chk">
-										<input type="checkbox" name="" id="q1_chk4" class="check">
+										<input type="checkbox" name="q1_chk" id="q1_chk4" class="check" data-value="4">
                                         <label for="q1_chk4"></label>
                                     </div>
                                 </div>
@@ -72,7 +62,7 @@
                             </div>
                             <div class="choice">
                                 <div class="_2">
-                                    <input type="text" id="q2_claim_goods" placeholder="입력하기">
+                                    <input type="text" id="claim_goods" placeholder="입력하기">
                                 </div>
                             </div>
                         </div>
@@ -84,7 +74,7 @@
                                     <span>이 름</span>
                                 </div>
                                 <div class="input">
-                                    <input type="text">
+                                    <input type="text" id="mb_name">
                                 </div>
                             </div>
                             <div class="row">
@@ -92,9 +82,9 @@
                                     <span>번 호</span>
                                 </div>
                                 <div class="input tel">
-                                    <input type="text"> -
-                                    <input type="text"> -
-                                    <input type="text">
+                                    <input type="text" id="mb_phone1" onkeyup="lengthCheck(this, 3)"> -
+                                    <input type="text" id="mb_phone2" onkeyup="lengthCheck(this, 4)"> -
+                                    <input type="text" id="mb_phone3" onkeyup="lengthCheck(this, 4)">
                                 </div>
                             </div>
                         </div>
@@ -104,8 +94,8 @@
                                     <span>주 소</span>
                                 </div>
                                 <div class="input addr">
-                                    <input type="text">
-                                    <button type="button">
+                                    <input type="text"  id="mb_addr1">
+                                    <button type="button" class="search">
                                         <img src="./images/sub_search_btn.png" alt="">
                                     </button>
                                 </div>
@@ -115,7 +105,7 @@
                                     <span></span>
                                 </div>
                                 <div class="input">
-                                    <input type="text">
+                                    <input type="text" id="mb_addr2">
                                 </div>
                             </div>
                         </div>
@@ -124,20 +114,20 @@
                                 <span>개인 정보 수집 및 이용에 동의합니다</span>
                                 <input type="checkbox" id="mb_agree1">
                                 <label for="mb_agree1" onclick="console.log('test')"></label>
-                                <span>약관보기</span>
+                                <span style="text-decoration:underline"><a href="javascript:void(0)" data-popup="#pt-agree1">약관보기</a></span>
                             </div>
                             <div class="agree2">
                                 <span>개인 정보 취급 위탁에 동의합니다</span>
                                 <input type="checkbox" id="mb_agree2">
                                 <label for="mb_agree2"></label>
-                                <span>약관보기</span>
+                                <span style="text-decoration:underline"><a href="javascript:void(0)" data-popup="#pt-agree2">약관보기</a></span>
                             </div>
                             <div class="agree-text">
                                 <span>입력하신 정보로 경품이 발송되니 정확하게 입력해주세요 부정확한 정보 입력으로 경품 미발송은 책임지지 않습니다</span>
                             </div>
                         </div>
                         <div class="btn-box">
-                            <button type="button">A/S 신청 접수</button>
+                            <button type="button" onclick="info_submit();return false;">A/S 신청 접수</button>
                         </div>
                     </div>
                 </div>
@@ -156,10 +146,13 @@
 <?
 	include_once "./popup.php";
 ?>
-    <input type="button" id="sample-btn" data-popup="#pt-agree2">
+    <input type="button" id="sample-btn" data-popup="#pt-result">
     <script>
+    var claimType = "";
+    var search_zipcode	= "";
+    var search_addr1	= "";
     $(window).on('load', function() {
-    	$('#sample-btn').trigger('click');
+    	// $('#sample-btn').trigger('click');
 
         var tl = new TimelineMax();
         var tl2 = new TimelineMax();
@@ -178,11 +171,13 @@
 			var _this = $(this);
 			$parent.find('.chk').each(function() {
 				if($(this).find('.check').is(_this)) {
-					$(this).find('.check').attr('checked', true);
+                    $(this).find('.check').attr('checked', true);
 				} else {
 					$(this).find('.check').attr('checked', false);
 				}
-			})
+            })
+            claimType	= $(this).data("value");
+    		// console.log(claimType);
 		});
     });
 	
