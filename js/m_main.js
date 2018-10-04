@@ -1,7 +1,7 @@
 
 $(function(){
 
-	window.bato = {};
+	window.pommd = {};
 
 	var $win = $(window),
 		$doc = $(document),
@@ -16,7 +16,7 @@ $(function(){
 	var agree1 	= "N";
 	var agree2 	= "N";
 
-	bato.popup = {
+	pommd.popup = {
 		bind : function(){
 			$doc
 				.on('click', '[data-popup]', function(e){
@@ -25,9 +25,9 @@ $(function(){
 					val = $this.attr('data-popup');
 
 				if (val.match('@close')){
-					bato.popup.close($this.closest('.popup'));
+					pommd.popup.close($this.closest('.popup'));
 				} else {
-					bato.popup.show($(val));
+					pommd.popup.show($(val));
 				}
 
 				if ($this.is('a')){
@@ -38,7 +38,7 @@ $(function(){
 				var $this = $(this),
 					val = $this.attr('data-popup-close');
 
-				bato.popup.close($(val));
+				pommd.popup.close($(val));
 
 				if ($this.is('a')){
 					e.preventDefault();
@@ -90,7 +90,7 @@ $(function(){
 			}
 		}
 	};
-	bato.popup.bind();
+	pommd.popup.bind();
 	
 	$('#rs1').on('click', function() {
 		// console.log("1111");
@@ -99,8 +99,8 @@ $(function(){
 			return false;
 		}
 
-		bato.popup.close($("#pt-pass"));
-		bato.popup.show($("#pt-pass2"));
+		pommd.popup.close($("#pt-pass"));
+		pommd.popup.show($("#pt-pass2"));
 	});
 	$('#rs2').on('click', function() {
 		var mb_name 	= $("#mb_name").val();
@@ -181,7 +181,7 @@ $(function(){
 				console.log(response);
 				if (response == "Y")
 				{
-					bato.popup.close($("#pt-pass"));
+					pommd.popup.close($("#pt-pass"));
 					// 사용자가 선택한 피부타입에 맞는 제품 및 문구 변경
 					if (pt_type == "light")
 					{
@@ -197,7 +197,7 @@ $(function(){
 						$(".need").html("아토덤 인텐시브밤으로 스킨 PT가 필요합니다");
 						$("#rs_goods").attr("src","./images/popup_atoderm_intensive.png")
 					}
-					bato.popup.show($("#pt-result"));
+					pommd.popup.show($("#pt-result"));
 				}else if (response == "D") {
 					alert("이미 참여하셨습니다. 감사합니다!");
 					location.href = "index.php";
@@ -329,12 +329,12 @@ function pt_draw()
 		url: "../main_exec.php",
 		success: function(response){
 			console.log(response);
-			bato.popup.close($("#pt-success"));
+			pommd.popup.close($("#pt-success"));
 
 			if (response == "Y")
-				bato.popup.show($("#pt-pass"));
+				pommd.popup.show($("#pt-pass"));
 			else
-				bato.popup.show($("#pt-retry"));
+				pommd.popup.show($("#pt-retry"));
 
 		}
 	});
