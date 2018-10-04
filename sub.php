@@ -94,7 +94,7 @@
                                     <span>주 소</span>
                                 </div>
                                 <div class="input addr">
-                                    <input type="text"  id="mb_addr1">
+                                    <input type="text"  id="mb_addr1" readonly>
                                     <button type="button" class="search">
                                         <img src="./images/sub_search_btn.png" alt="">
                                     </button>
@@ -113,7 +113,7 @@
                             <div class="agree1">
                                 <span>개인 정보 수집 및 이용에 동의합니다</span>
                                 <input type="checkbox" id="mb_agree1">
-                                <label for="mb_agree1" onclick="console.log('test')"></label>
+                                <label for="mb_agree1"></label>
                                 <span style="text-decoration:underline"><a href="javascript:void(0)" data-popup="#pt-agree1">약관보기</a></span>
                             </div>
                             <div class="agree2">
