@@ -92,123 +92,6 @@ $(function(){
 	};
 	pommd.popup.bind();
 	
-	$('#rs1').on('click', function() {
-		// console.log("1111");
-		if ($(".check-wrapper .check").hasClass("is-checked") === false) {
-			alert("나에게 맞는 PT크림을 선택해주세요");
-			return false;
-		}
-
-		pommd.popup.close($("#pt-pass"));
-		pommd.popup.show($("#pt-pass2"));
-	});
-	$('#rs2').on('click', function() {
-		var mb_name 	= $("#mb_name").val();
-		var mb_phone1 	= $("#mb_phone1").val();
-		var mb_phone2 	= $("#mb_phone2").val();
-		var mb_phone3 	= $("#mb_phone3").val();
-		var mb_mail1	= $("#mb_mail1").val();
-		var mb_mail2	= $("#mb_mail2").val();
-		var mb_addr1 	= $("#mb_addr1").val();
-		var mb_addr2 	= $("#mb_addr2").val();
-		var mb_phone 	= mb_phone1 + mb_phone2 + mb_phone3;
-		var mb_mail		= mb_mail1 + "@" + mb_mail2;
-
-		// console.log($('.mb_type').val());
-		if (mb_name == "") {
-			alert("이름을 입력해 주세요.");
-			$("#mb_name").focus();
-			return false;
-		}
-
-		if (mb_phone1 == "") {
-			alert("전화번호를 입력해 주세요.");
-			$("#mb_phone1").focus();
-			return false;
-		}
-
-		if (mb_phone2 == "") {
-			alert("전화번호를 입력해 주세요.");
-			$("#mb_phone2").focus();
-			return false;
-		}
-		if (mb_phone3 == "") {
-			alert("전화번호를 입력해 주세요.");
-			$("#mb_phone3").focus();
-			return false;
-		}
-		if (mb_addr1 == "") {
-			alert("주소를 입력해 주세요.");
-			return false;
-		}
-		if (mb_addr2 == "") {
-			alert("상세주소를 입력해 주세요.");
-			$("#mb_addr2").focus();
-			return false;
-		}
-		if (mb_mail1 == "") {
-			alert("메일주소를 입력해주세요");
-		}
-		if (mb_mail2 == "") {
-			alert("메일주소를 입력해주세요");
-		}
-
-		if ($("#agree1").is(":checked") === false)
-		{
-			alert('개인정보 수집 및 이용약관에 동의하셔야만 이벤트 참여가 가능합니다.');
-			return false;
-		}
-
-		if ($("#agree2").is(":checked") === false)
-		{
-			alert('개인정보 취급 위탁 약관에 동의하셔야만 이벤트 참여가 가능합니다.');
-			return false;
-		}
-
-		$.ajax({
-			type:"POST",
-			data:{
-				"exec"				: "insert_member_info",
-				"mb_name"			: mb_name,
-				"mb_phone"			: mb_phone,
-				"mb_mail"			: mb_mail,
-				"mb_addr1"			: mb_addr1,
-				"mb_addr2"			: mb_addr2,
-				"mb_type"			: pt_type
-			},
-			url: "../main_exec.php",
-			success: function(response){
-				console.log(response);
-				if (response == "Y")
-				{
-					pommd.popup.close($("#pt-pass"));
-					// 사용자가 선택한 피부타입에 맞는 제품 및 문구 변경
-					if (pt_type == "light")
-					{
-						$(".your-status").html("라이트 PT를 선택한 당신은 <b>계절성 건성</b>입니다");
-						$(".need").html("아토덤 크림으로 스킨 PT가 필요합니다");
-						$("#rs_goods").attr("src","./images/popup_atoderm_cream.png")
-					}else if (pt_type == "medium"){
-						$(".your-status").html("미디움 PT를 선택한 당신은 <b>만성 건성</b>입니다");
-						$(".need").html("아토덤 PP밤으로 스킨 PT가 필요합니다");
-						$("#rs_goods").attr("src","./images/popup_atoderm_pp.png")
-					}else{
-						$(".your-status").html("헤비 PT를 선택한 당신은 <b>문제성 건성</b>입니다");
-						$(".need").html("아토덤 인텐시브밤으로 스킨 PT가 필요합니다");
-						$("#rs_goods").attr("src","./images/popup_atoderm_intensive.png")
-					}
-					pommd.popup.show($("#pt-result"));
-				}else if (response == "D") {
-					alert("이미 참여하셨습니다. 감사합니다!");
-					location.href = "index.php";
-				}else{
-					alert("참여자가 많습니다. 다시시도해 주세요!");
-					location.reload();
-				}
-			}
-		});
-	});
-	
 	$('#mb_mail3').on('change', function() {
 		var val = $(this).val();
 		if(val == '') {
@@ -254,6 +137,8 @@ $(function(){
 				// document.getElementById('mb_addr1').value = addr1;
 				document.getElementById('mb_addr1').value 	= "(" + data.zonecode + ") " + addr1;
 				// document.getElementById('mb_addr1').value 	= addr1;
+				search_zipcode 	= data.zonecode;
+				search_addr1 	= addr1;
 	
 				// iframe을 넣은 element를 안보이게 한다.
 				// (autoClose:false 기능을 이용한다면, 아래 코드를 제거해야 화면에서 사라지지 않는다.)
@@ -272,6 +157,168 @@ $(function(){
 	});
 
 });
+
+function info_submit() {
+	var claim_goods 	= $("#claim_goods").val();
+	var mb_name 		= $("#mb_name").val();
+	var mb_phone1 		= $("#mb_phone1").val();
+	var mb_phone2 		= $("#mb_phone2").val();
+	var mb_phone3 		= $("#mb_phone3").val();
+	// var mb_mail1		= $("#mb_mail1").val();
+	// var mb_mail2		= $("#mb_mail2").val();
+	var mb_addr1 		= $("#mb_addr1").val();
+	var mb_addr2 		= $("#mb_addr2").val();
+	var mb_phone 		= mb_phone1 + mb_phone2 + mb_phone3;
+	// var mb_mail			= mb_mail1 + "@" + mb_mail2;
+
+	console.log(claimType);
+	if ($(".check").is(":checked") === false) {
+		alert("기존에 사용했던 시카제품의 불만족스런 이유를 선택해 주세요");
+		return false;
+	}
+
+	if (claim_goods == "") {
+		alert("불만족스런 시카제품을 입력해주세요.");
+		$("#claim_goods").focus();
+		return false;
+	}
+
+	if (mb_name == "") {
+		alert("이름을 입력해 주세요.");
+		$("#mb_name").focus();
+		return false;
+	}
+
+	if (mb_phone1 == "") {
+		alert("전화번호를 입력해 주세요.");
+		$("#mb_phone1").focus();
+		return false;
+	}
+	
+	if (mb_phone2 == "") {
+		alert("전화번호를 입력해 주세요.");
+		$("#mb_phone2").focus();
+		return false;
+	}
+	if (mb_phone3 == "") {
+		alert("전화번호를 입력해 주세요.");
+		$("#mb_phone3").focus();
+		return false;
+	}
+	if (mb_addr1 == "") {
+		alert("주소를 입력해 주세요.");
+		return false;
+	}
+	if (mb_addr2 == "") {
+		alert("상세주소를 입력해 주세요.");
+		$("#mb_addr2").focus();
+		return false;
+	}
+	// if (mb_mail1 == "") {
+	// 	alert("메일주소를 입력해주세요");
+	// }
+	// if (mb_mail2 == "") {
+	// 	alert("메일주소를 입력해주세요");
+	// }
+
+	if ($("#mb_agree1").is(":checked") === false)
+	{
+		alert('개인정보 수집 및 이용약관에 동의하셔야만 이벤트 참여가 가능합니다.');
+		return false;
+	}
+
+	if ($("#mb_agree2").is(":checked") === false)
+	{
+		alert('개인정보 취급 위탁 약관에 동의하셔야만 이벤트 참여가 가능합니다.');
+		return false;
+	}
+
+	$.ajax({
+		type:"POST",
+		data:{
+			"exec"				: "insert_member_info",
+			"claim_goods"		: claim_goods,
+			"mb_name"			: mb_name,
+			"mb_phone"			: mb_phone,
+			// "mb_mail"			: mb_mail,
+			"mb_zipcode"		: search_zipcode,
+			"mb_addr1"			: search_addr1,
+			"mb_addr2"			: mb_addr2,
+			"claimType"			: claimType
+		},
+		url: "../main_exec.php",
+		success: function(response){
+			console.log(response);
+			if (response == "Y")
+			{
+				// bato.popup.close($("#pt-pass"));
+				// console.log(pt_type);
+				// $("#rs_name").html(mb_name);
+				$("#req_name").html(mb_name);
+				$("#req_goods").html(cutStr(claim_goods));
+				$("#req_req").html(claimName);
+				$(".result-image img").attr("src","./images/popup_result"+claimType+".png");
+				pommd.popup.show($("#pt-result"));
+			}else if (response == "D") {
+				alert("이미 참여하셨습니다. 감사합니다!");
+				location.href = "index.php";
+			}else{
+				alert("참여자가 많습니다. 다시시도해 주세요!");
+				location.reload();
+			}
+		}
+	});
+}
+function cutStr(limitText)
+{
+	if (is_hangul_char(limitText))
+		var maxByte = 10;
+	else
+		var maxByte = 5;
+	var strValue = limitText;
+	var strLen = strValue.length;
+	var totalByte = 0;
+	var len = 0;
+	var oneChar = "";
+	var str2 = "";
+	var resultStr	= "";
+	for (var i = 0; i < strLen; i++) {
+		oneChar = strValue.charAt(i);
+		if (escape(oneChar).length > 4) {
+			totalByte += 2;
+		} else {
+			totalByte++;
+		}
+
+		// 입력한 문자 길이보다 넘치면 잘라내기 위해 저장
+		if (totalByte <= maxByte) {
+			len = i + 1;
+		}
+	}
+
+	// 넘어가는 글자는 자른다.
+	// if (totalByte > maxByte) {
+		// alert(maxByte + "자를 초과 입력 할 수 없습니다.");
+		// str2 = strValue.substr(0, len);
+		// obj.value = str2;
+		// cutStr(obj.value, 4000);
+	// }else{
+		// str2 = strValue;
+	// }
+	str2 = strValue.substr(0, 1);
+	resultStr = str2;
+	for (var j = 1; j < len; j++) {
+		resultStr += "O";
+	}
+	return resultStr;
+}
+function is_hangul_char(ch){
+	c = ch.charCodeAt(0);
+	if( 0x1100<=c && c<=0x11FF ) return true;
+	if( 0x3130<=c && c<=0x318F ) return true;
+	if( 0xAC00<=c && c<=0xD7A3 ) return true;
+	return false;
+}
 
 
 function closeDaumPostcode() {
@@ -318,28 +365,10 @@ function confirm_close()
 	if (confirm("창을 닫으시면 이벤트 참여가 취소됩니다. 닫으시겠습니까?"))
 		location.href = "index.php";
 }
-
-function pt_draw()
+function go_link(url)
 {
-	$.ajax({
-		type:"POST",
-		data:{
-			"exec"				: "draw_winner"
-		},
-		url: "../main_exec.php",
-		success: function(response){
-			console.log(response);
-			pommd.popup.close($("#pt-success"));
-
-			if (response == "Y")
-				pommd.popup.show($("#pt-pass"));
-			else
-				pommd.popup.show($("#pt-retry"));
-
-		}
-	});
+	location.href = url;
 }
-
 function sns_share(media, flag)
 {
 	if (media == "fb")

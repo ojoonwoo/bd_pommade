@@ -1,16 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-	<head>
-		<meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
-		<meta http-equiv="X-UA-Compatible" content="ie=edge">
-		<link rel="stylesheet" href="./css/reset.css">
-		<link rel="stylesheet" href="./css/style.css">
-		<script src="../js/jquery-1.11.2.min.js"></script>
-		<script src="../js/m_main.js"></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"></script>
-		<title>Document</title>
-	</head>
+<?
+	include_once "head.php";
+?>
 	<body>
 		<div class="container">
 			<div class="content sub">
@@ -45,8 +35,8 @@
 									</div>
 									<ul class="check-list">
 										<li>
-											<div class="check-wrap">
-												<input type="checkbox" class="check" id="q1_chk1">
+											<div class="check-wrap checkType">
+												<input type="checkbox" class="check" id="q1_chk1" data-value="1" data-name="진정력">
 												<label for="q1_chk1"></label>
 												<span>진정력</span>
 											</div>
@@ -60,8 +50,8 @@
 											</div>
 										</li>
 										<li>
-											<div class="check-wrap">
-												<input type="checkbox" class="check" id="q1_chk2">
+											<div class="check-wrap checkType">
+												<input type="checkbox" class="check" id="q1_chk2" data-value="2" data-name="발림성">
 												<label for="q1_chk2"></label>
 												<span>발림성</span>
 											</div>
@@ -76,8 +66,8 @@
 											</div>
 										</li>
 										<li>
-											<div class="check-wrap">
-												<input type="checkbox" class="check" id="q1_chk3">
+											<div class="check-wrap checkType">
+												<input type="checkbox" class="check" id="q1_chk3" data-value="3" data-name="수분도">
 												<label for="q1_chk3"></label>
 												<span>수분도</span>
 											</div>
@@ -92,8 +82,8 @@
 											</div>
 										</li>
 										<li>
-											<div class="check-wrap">
-												<input type="checkbox" class="check" id="q1_chk4">
+											<div class="check-wrap checkType">
+												<input type="checkbox" class="check" id="q1_chk4" data-value="4" data-name="손상케어">
 												<label for="q1_chk4"></label>
 												<span>손상케어</span>
 											</div>
@@ -114,7 +104,7 @@
 										<span>불만족스러웠던 시카 제품을 알려주세요</span>
 									</div>
 									<div class="answer">
-										<input type="text" placeholder="입력하기">
+										<input type="text" id="claim_goods" placeholder="입력하기">
 									</div>
 								</div>
 							</div>
@@ -124,30 +114,30 @@
 								<div class="input-group">
 									<div class="guide">이 름</div>
 									<div class="input">
-										<input type="text">
+										<input type="text" id="mb_name">
 									</div>
 								</div>
 								<div class="input-group tel">
 									<div class="guide">번 호</div>
 									<div class="input">
-										<input type="tel">
+										<input type="tel" id="mb_phone1" onkeyup="lengthCheck(this, 3)">
 										<span>-</span>
-										<input type="tel">
+										<input type="tel" id="mb_phone2" onkeyup="lengthCheck(this, 4)">
 										<span>-</span>
-										<input type="tel">
+										<input type="tel" id="mb_phone3" onkeyup="lengthCheck(this, 4)">
 									</div>
 								</div>
 								<div class="input-group addr">
 									<div class="guide">주 소</div>
 									<div class="input">
-										<input type="text" readonly>
+										<input type="text"  id="mb_addr1" readonly>
 										<button class="find-addr"></button>
 									</div>
 								</div>
 								<div class="input-group">
 									<div class="guide"></div>
 									<div class="input">
-										<input type="text">
+										<input type="text" id="mb_addr2">
 									</div>
 								</div>
 								<div class="input-group email">
@@ -177,7 +167,7 @@
 									<div class="check-wrap">
 										<input type="checkbox" class="check" id="mb_agree1">
 										<label for="mb_agree1"></label>
-										<a href="javascript:void(0)">약관보기</a>
+										<a href="javascript:void(0)" data-popup="#pt-agree1">약관보기</a>
 									</div>
 								</div>
 								<div class="row">
@@ -185,12 +175,12 @@
 									<div class="check-wrap">
 										<input type="checkbox" class="check" id="mb_agree2">
 										<label for="mb_agree2"></label>
-										<a href="javascript:void(0)">약관보기</a>
+										<a href="javascript:void(0)" data-popup="#pt-agree2">약관보기</a>
 									</div>
 								</div>
 								<div class="msg">입력하신 정보로 경품이 발송되니 정확하게 입력해주세요 <br>부정확한 정보 입력으로 경품 미발송은 책임지지 않습니다</div>
 							</div>
-							<button class="btn-submit">
+							<button class="btn-submit" onclick="info_submit();return false;">
 								A/S 신청 접수
 							</button>
 						</div>
@@ -212,32 +202,48 @@
 <?
 		include_once "./popup.php";
 ?>
+		<div id="layer" style="display:none;position:fixed;overflow:hidden;z-index:9999;-webkit-overflow-scrolling:touch;">
+			<img src="//i1.daumcdn.net/localimg/localimages/07/postcode/320/close.png" id="btnCloseLayer" style="width:7%;cursor:pointer;position:absolute;right:-3px;top:-3px;z-index:1" onclick="closeDaumPostcode()" alt="닫기 버튼">
+		</div>
+
 		<input type="button" id="sample-btn" data-popup="#pt-agree2">
 		<script>
+			var claimType = "";
+			var claimName = "";
+			var search_zipcode	= "";
+			var search_addr1	= "";
+
 			$(window).on('load', function() {
-				$('#sample-btn').trigger('click');
-				var tl = new TimelineMax();
-				var tl2 = new TimelineMax();
-				// tl.to($(".neon-on-title"), 5, {autoAlpha:1, repeat:1, yoyo:true, ease: Linear.easeNone}, 0);
-				// tl.play();
-				tl.to($(".neon-on-title"), 0.3, {alpha:0, repeatDelay:0.3, repeat:-1, yoyo:true})
-				tl.play();
+				// $('#sample-btn').trigger('click');
 
-				setTimeout(function(){
-					tl2.to($(".goods-area"), 1, {alpha:1})
-					tl2.play();
-				},1500);
+				// $('.checkType .check').on('click', function() {
+				// 	var $parent = $(this).parent().parent();
+				// 	var _this = $(this);
+				// 	$parent.find('.checkType').each(function() {
+				// 		if($(this).find('.check').is(_this)) {
+				// 			$(this).find('.check').attr('checked', true);
+				// 		} else {
+				// 			$(this).find('.check').attr('checked', false);
+				// 		}
+				// 	})
+				// 	claimType	= $(this).data("value");
+				// 	claimName	= $(this).data("name");
+				// 	console.log(claimType);
+				// });
 
-				$('.choice .check').on('click', function() {
-					var $parent = $(this).parent().parent();
+				$('.box._list .check').on('click', function() {
+					var $parent = $(this).closest('ul');
 					var _this = $(this);
-					$parent.find('.chk').each(function() {
+					$parent.find('li').each(function() {
 						if($(this).find('.check').is(_this)) {
 							$(this).find('.check').attr('checked', true);
 						} else {
 							$(this).find('.check').attr('checked', false);
 						}
 					})
+					claimType	= $(this).data("value");
+					claimName	= $(this).data("name");
+					console.log(claimType);
 				});
 			});
 			$('#email-select').on('change', function() {

@@ -1,5 +1,5 @@
 <div class="popup pt-result" id="pt-result">
-	<button type="button" class="popup-close" data-popup="@close"></button>
+	<button type="button" class="popup-close" onclick="location.href='index.php';"></button>
 	<div class="inner">
 		<div class="title-area">
 			<span class="title">시카 A/S 신청서</span>
@@ -12,7 +12,7 @@
 					<span>신청인</span>
 				</div>
 				<div class="rs_req">
-					<span>김더마</span>
+					<span id="req_name">김더마</span>
 				</div>
 			</div>
 			<div class="box ap_goods">
@@ -20,7 +20,7 @@
 					<span>신청 제품</span>
 				</div>
 				<div class="rs_req">
-					<span>이OOOO</span>
+					<span id="req_goods">이OOOO</span>
 				</div>
 			</div>
 			<div class="box ap_req">
@@ -28,7 +28,7 @@
 					<span>요구 사항</span>
 				</div>
 				<div class="rs_req">
-					<span>진정력</span>
+					<span id="req_req">진정력</span>
 				</div>
 			</div>
 		</div>
@@ -38,7 +38,7 @@
 			</div>
 		</div>
 		<div class="btn-area">
-			<button type="button">신청 완료</button>
+			<button type="button" onclick="location.href='index.php';">신청 완료</button>
 			<p>A/S는 1가구당 1회에 한해 무상 진행됩니다</p>
 		</div>
 	</div>
