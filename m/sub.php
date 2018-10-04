@@ -150,6 +150,26 @@
 										<input type="text">
 									</div>
 								</div>
+								<div class="input-group email">
+									<div class="guide">이메일</div>
+									<div class="input">
+										<input type="text">
+										<span>@</span>
+										<input type="text" id="email-tail">
+									</div>
+								</div>
+								<div class="input-group email">
+									<div class="guide"></div>
+									<div class="input">
+										<select name="" id="email-select">
+											<option value="direct">직접 입력</option>
+											<option value="naver.com">naver.com</option>
+											<option value="gmail.com">gmail.com</option>
+											<option value="daum.net">daum.net</option>
+											<option value="nate.com">nate.com</option>
+										</select>
+									</div>
+								</div>
 							</div>
 							<div class="agree-wrap">
 								<div class="row">
@@ -220,6 +240,15 @@
 					})
 				});
 			});
+			$('#email-select').on('change', function() {
+				var selectVal = $(this).val();
+				if(selectVal == 'direct') {
+					$('#email-tail').val('').focus().attr('readonly', false);
+				} else {
+					$('#email-tail').val(selectVal).attr('readonly', true);
+				}
+				
+			})
 
 		</script>
 	</body>

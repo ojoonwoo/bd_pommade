@@ -461,7 +461,20 @@ html, body {
 	font-size: 10px;
 	vertical-align: middle;
 }
-.content.sub .receipt-form .input-group.tel .input input[type="tel"]:last-child {
+.content.sub .receipt-form .input-group.email .input input[type="text"] {
+	width: 46%;
+	position: relative;
+}
+.content.sub .receipt-form .input-group.email .input span {
+	display: inline-block;
+	width: 8%;
+	color: #eabdff;
+	font-size: 12px;
+	vertical-align: middle;
+	text-align: center;
+}
+.content.sub .receipt-form .input-group.tel .input input[type="tel"]:last-child,
+.content.sub .receipt-form .input-group.email .input input[type="text"]:last-child{
 	margin-right: 0;
 }
 .content.sub .receipt-form .input-group.addr .input input[type="text"] {
@@ -473,6 +486,17 @@ html, body {
 	height: 23px;
 	background: url(../images/search_icon.png) center / 13px auto no-repeat #dcd0e8;
 	vertical-align: middle;
+}
+.content.sub .receipt-form .input-group.email select {
+	width: 100%;
+	background: url(../images/arrow.png) 95% center / 8px auto no-repeat rgba(255, 255, 255, 0.1);
+	height: 23px;
+	line-height: 23px;
+	vertical-align: middle;
+	padding-left: 10px;
+	font-family: 'NotoSansKR-DemiLight';
+	color: #eabdff;
+	font-size: 10px;
 }
 .content.sub .receipt-form .agree-wrap {
 	padding-left: 15.4%;
@@ -898,4 +922,8 @@ html.popup-opened body {
 .popup.pt-agree .desc p {
 	word-break: break-all;
 	word-break: break-word;
+}
+
+#sample-btn {
+	display: none;
 }
