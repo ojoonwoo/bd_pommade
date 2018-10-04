@@ -36,19 +36,19 @@
                             <div class="choice">
                                 <div class="_1">
                                     <div class="chk1 chk">
-                                        <input type="checkbox" name="q1_chk" id="q1_chk1" class="check" data-value="1">
+                                        <input type="checkbox" name="q1_chk" id="q1_chk1" class="check" data-value="1" data-name="진정력">
                                         <label for="q1_chk1"></label>
                                     </div>
 									<div class="chk2 chk">
-										<input type="checkbox" name="q1_chk" id="q1_chk2" class="check" data-value="2">
+										<input type="checkbox" name="q1_chk" id="q1_chk2" class="check" data-value="2" data-name="발림성">
                                         <label for="q1_chk2"></label>
                                     </div>
 									<div class="chk3 chk">
-										<input type="checkbox" name="q1_chk" id="q1_chk3" class="check" data-value="3">
+										<input type="checkbox" name="q1_chk" id="q1_chk3" class="check" data-value="3" data-name="수분도">
                                         <label for="q1_chk3"></label>
                                     </div>
 									<div class="chk4 chk">
-										<input type="checkbox" name="q1_chk" id="q1_chk4" class="check" data-value="4">
+										<input type="checkbox" name="q1_chk" id="q1_chk4" class="check" data-value="4" data-name="손상케어">
                                         <label for="q1_chk4"></label>
                                     </div>
                                 </div>
@@ -149,6 +149,7 @@
     <input type="button" id="sample-btn" data-popup="#pt-result">
     <script>
     var claimType = "";
+    var claimName = "";
     var search_zipcode	= "";
     var search_addr1	= "";
     $(window).on('load', function() {
@@ -177,6 +178,7 @@
 				}
             })
             claimType	= $(this).data("value");
+            claimName	= $(this).data("name");
     		// console.log(claimType);
 		});
     });

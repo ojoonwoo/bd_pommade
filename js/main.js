@@ -148,7 +148,8 @@ function info_submit() {
 	var mb_addr2 		= $("#mb_addr2").val();
 	var mb_phone 		= mb_phone1 + mb_phone2 + mb_phone3;
 	// var mb_mail			= mb_mail1 + "@" + mb_mail2;
-
+// console.log(cutStr(claim_goods));
+// return false;
 	if ($(".check").is(":checked") === false) {
 		alert("기존에 사용했던 시카제품의 불만족스런 이유를 선택해 주세요");
 		return false;
@@ -231,7 +232,10 @@ function info_submit() {
 				// bato.popup.close($("#pt-pass"));
 				// console.log(pt_type);
 				// $("#rs_name").html(mb_name);
-
+				$("#req_name").html(mb_name);
+				$("#req_goods").html(cutStr(claim_goods));
+				$("#req_req").html(claimName);
+				$(".result-image img").attr("src","./images/popup_result"+claimType+".png");
 				bato.popup.show($("#pt-result"));
 			}else if (response == "D") {
 				alert("이미 참여하셨습니다. 감사합니다!");
@@ -244,6 +248,95 @@ function info_submit() {
 	});
 }
 
+function cutStr(limitText)
+{
+// 	var thisObject = $(this);
+//              
+// 	var limit = limitNum;
+// 	var str = limitText;
+// 	var strLength = 0;
+// 	var strTitle = "";
+// 	var strPiece = "";
+// 	var check = false;
+//                      
+// 	for (i = 0; i < str.length; i++){
+// 	    var code = str.charCodeAt(i);
+// 	    var ch = str.substr(i,1).toUpperCase();
+// 	    //체크 하는 문자를 저장
+// 	    strPiece = str.substr(i,1)
+	
+// 	    code = parseInt(code);
+	
+// 	    if ((ch < "0" || ch > "9") && (ch < "A" || ch > "Z") && ((code > 255) || (code < 0))){
+// 	        strLength = strLength + 3; //UTF-8 3byte 로 계산
+// 	    }else{
+// 	        strLength = strLength + 1;
+// 	    }
+	
+// 	    if(strLength>limit){ //제한 길이 확인
+// 	        check = true;
+// 	        break;
+// 	    }else{
+// 	        strTitle = strTitle+strPiece; //제한길이 보다 작으면 자른 문자를 붙여준다.
+// 	    }
+	
+// 	}
+	
+// 	// if(check){
+// 	//     alert(limit+"byte 초과된 문자는 잘려서 입력 됩니다.");
+// 	// }
+	
+// 	// thisObject.val(strTitle);	
+// 	return strTitle;
+
+	if (is_hangul_char(limitText))
+		var maxByte = 10;
+	else
+		var maxByte = 5;
+	var strValue = limitText;
+	var strLen = strValue.length;
+	var totalByte = 0;
+	var len = 0;
+	var oneChar = "";
+	var str2 = "";
+	var resultStr	= "";
+	for (var i = 0; i < strLen; i++) {
+		oneChar = strValue.charAt(i);
+		if (escape(oneChar).length > 4) {
+			totalByte += 2;
+		} else {
+			totalByte++;
+		}
+
+		// 입력한 문자 길이보다 넘치면 잘라내기 위해 저장
+		if (totalByte <= maxByte) {
+			len = i + 1;
+		}
+	}
+
+	// 넘어가는 글자는 자른다.
+	// if (totalByte > maxByte) {
+		// alert(maxByte + "자를 초과 입력 할 수 없습니다.");
+		// str2 = strValue.substr(0, len);
+		// obj.value = str2;
+		// cutStr(obj.value, 4000);
+	// }else{
+		// str2 = strValue;
+	// }
+	str2 = strValue.substr(0, 1);
+	resultStr = str2;
+	for (var j = 1; j < len; j++) {
+		resultStr += "O";
+	}
+	return resultStr;
+}
+function is_hangul_char(ch){
+	c = ch.charCodeAt(0);
+	if( 0x1100<=c && c<=0x11FF ) return true;
+	if( 0x3130<=c && c<=0x318F ) return true;
+	if( 0xAC00<=c && c<=0xD7A3 ) return true;
+	return false;
+  }
 function only_num(obj)
 {
 	var inText = obj.value;
