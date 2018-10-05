@@ -511,7 +511,10 @@ html, body {
 	color: #eabdff;
 	width: 257px;
 	height: 37px;
+	padding-left: 8px;
 	background: #653c78;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
 }
 .content.sub .content-wrap .inner .input-area .input-box1 .row .input.tel input {
 	font-family: 'Noto Sans Korean';
@@ -1176,6 +1179,7 @@ html.popup-opened {
 .popup.pt-agree2 .inner .desc .desc-inner .small.first {
 	padding-top: 22px;
 }
+/*팝업 오픈 샘플버튼 숨김처리*/
 #sample-btn {
 	display: none;
 }

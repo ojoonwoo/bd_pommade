@@ -12,7 +12,7 @@ switch ($_REQUEST['exec'])
         $claimType      = trim($_REQUEST["claimType"]);
         $mb_name        = trim($_REQUEST["mb_name"]);
         $mb_phone       = trim($_REQUEST["mb_phone"]);
-		// $mb_mail	 = trim($_REQUEST["mb_mail"]);
+		$mb_mail	 	= trim($_REQUEST["mb_mail"]);
         $mb_zipcode     = $_REQUEST["mb_zipcode"];
         $mb_addr1       = $_REQUEST["mb_addr1"];
         $mb_addr2       = trim($_REQUEST["mb_addr2"]);
@@ -26,7 +26,7 @@ switch ($_REQUEST['exec'])
         {
             $flag = "D";
         }else{
-			$query		= "INSERT INTO member_info(mb_ipaddr, mb_name, mb_phone, mb_type, mb_goods, mb_zipcode, mb_addr1, mb_addr2, mb_gubun, mb_media, mb_regdate) values('".$_SERVER['REMOTE_ADDR']."','".$mb_name."','".$mb_phone."','".$claimType."','".$claim_goods."','".$mb_zipcode."','".$mb_addr1."','".$mb_addr2."','".$gubun."','".$_SESSION['ss_media']."',now())";
+			$query		= "INSERT INTO member_info(mb_ipaddr, mb_name, mb_phone, mb_email, mb_type, mb_goods, mb_zipcode, mb_addr1, mb_addr2, mb_gubun, mb_media, mb_regdate) values('".$_SERVER['REMOTE_ADDR']."','".$mb_name."','".$mb_phone."','".$mb_mail."','".$claimType."','".$claim_goods."','".$mb_zipcode."','".$mb_addr1."','".$mb_addr2."','".$gubun."','".$_SESSION['ss_media']."',now())";
             $result		= mysqli_query($my_db, $query);
 
             if ($result)

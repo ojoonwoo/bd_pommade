@@ -145,7 +145,7 @@
 									<div class="input">
 										<input type="text" id="mb_email1">
 										<span>@</span>
-										<input type="text" id="mb_ewmail2">
+										<input type="text" id="mb_email2">
 									</div>
 								</div>
 								<div class="input-group email">
