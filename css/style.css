@@ -82,6 +82,9 @@ html, body {
 	display: inline-block;
 	margin: 7px 0 0 7px;
 }
+.content.main .notice-wrap .inner span b {
+	background: rgba(255, 255, 255, 0.22);
+}
 .content.main .content-wrap {
 	/*  */
 }
@@ -722,6 +725,14 @@ html, body {
 	background: url(../images/notice_bg.png) no-repeat center 0;
 	background-size: cover;
 	height: 67px;
+	position: relative;
+}
+.content .notice-wrap {
+	position: relative;
+}
+.content .notice-wrap .inner {
+	position: absolute;
+	left: 100%;
 }
 .content.info .notice-wrap .inner {
 	width: 1000px;

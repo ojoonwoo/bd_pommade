@@ -32,14 +32,6 @@
 						</div>
 					</div>
 				</div>
-<!--
-				<div class="notice-wrap">
-					<div class="inner">
-						<img src="./images/megaphone.png" alt="">
-						<span>기존 시카 제품에 불만족을 느끼신 100번째 김OO 고객님 께서 포마드로 A/S받으셨습니다</span>
-					</div>
-				</div>
--->
 				<div class="content-wrap">
 					<div class="inner">
 						<div class="notice-area">
@@ -95,6 +87,7 @@
 					tl2.to($(".goods-area"), 1, {alpha:1})
 					tl2.play();
 				},1500);
+				
 			});
 		</script>
 	</body>

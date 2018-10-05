@@ -7,8 +7,8 @@
 	<link rel="stylesheet" href="./css/reset.css">
 	<link rel="stylesheet" href="./css/style.css">
     <script src="./js/jquery-1.11.2.min.js"></script>
-    <script src="./js/main.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"></script>
     <script src="http://dmaps.daum.net/map_js_init/postcode.v2.js"></script>
+    <script src="./js/main.js"></script>
     <title>BIODERMA - Pommade</title>
 </head>

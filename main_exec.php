@@ -71,5 +71,21 @@ switch ($_REQUEST['exec'])
 		shuffle($draw_array);
 
         echo $draw_array[0];
+		
+	break;
+	case "notice_get_member" :
+		$mnv_f          = new mnv_function();
+		$my_db          = $mnv_f->Connect_MySQL();
+		$gubun          = $mnv_f->MobileCheck();
+		
+		$query = "SELECT idx, mb_name FROM member_info ORDER BY mb_regdate DESC LIMIT 1";
+		$result 	= mysqli_query($my_db, $query);
+		
+		if ($result)
+			$rsData = mysqli_fetch_array($result);
+		else
+			$rsData = "N";
+		
+		echo json_encode($rsData);
     break;
 }

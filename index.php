@@ -31,7 +31,7 @@
             <div class="notice-wrap">
                 <div class="inner">
                     <img src="./images/megaphone.png" alt="">
-                    <span>기존 시카 제품에 불만족을 느끼신 100번째 김OO 고객님 께서 포마드로 A/S받으셨습니다</span>
+					<span>기존 시카 제품에 불만족을 느끼신 <b>100번째 김OO 고객님</b> 께서 포마드로 A/S받으셨습니다</span>
                 </div>
             </div>
             <div class="content-wrap">
@@ -80,7 +80,41 @@
             tl2.to($(".goods-area"), 1, {alpha:1})
             tl2.play();
         },1500);
+		
+//		getNoticeInfo('0');
     });
+//		var $noticeWrap = $('.notice-wrap .inner');
+//		var $noticeSpan = $('.notice-wrap span');
+//		function getNoticeInfo(time) {
+//			var time = time || 20000;
+//			setTimeout(function() {
+//				//					가장 최근 참여자 1명 뽑아와서 전광판에 뿌린 후 애니메이션
+//				//					애니메이션 끝나고 반복
+//				$.ajax({
+//					type:"POST",
+//					data:{
+//						"exec"				: "notice_get_member",
+//					},
+//					url: "./main_exec.php",
+//					success: function(response){
+//						var data = $.parseJSON(response);
+//						var idx = data.idx,
+//							name = data.mb_name,
+//							targetPoint = $noticeWrap.outerWidth() + Math.abs(($(window).width() - $noticeWrap.outerWidth()));
+////							console.log(targetPoint);
+//						if (response != "N")
+//						{
+//							$noticeSpan.html('기존 시카 제품에 불만족을 느끼신 '+'<b>'+idx+'번째 '+name+' 고객님</b> 께서 포마드로 A/S받으셨습니다');
+//							TweenMax.to($noticeWrap, 19, {x: -(targetPoint*2), ease:Linear.easeNone, onComplete: resetAnimation});
+//						}
+//					}
+//				});
+//				getNoticeInfo();
+//			}, time);
+//		}
+//		function resetAnimation() {
+//			TweenMax.set($noticeWrap, {clearProps: "all"});
+//		}
     </script>
 </body>
 </html>
