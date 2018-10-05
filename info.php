@@ -48,6 +48,10 @@
                     <div class="btn-area">
                         <button type="button">포마드로 A/S 경험하기</button>
                     </div>
+                    <div class="share-area">
+                        <button class="fb"></button>
+                        <button class="kt"></button>
+                    </div>
                 </div>
             </div>
             <div class="footer-wrap">
