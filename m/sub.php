@@ -143,9 +143,9 @@
 								<div class="input-group email">
 									<div class="guide">이메일</div>
 									<div class="input">
-										<input type="text">
+										<input type="text" id="mb_email1">
 										<span>@</span>
-										<input type="text" id="email-tail">
+										<input type="text" id="mb_ewmail2">
 									</div>
 								</div>
 								<div class="input-group email">
@@ -249,12 +249,11 @@
 			$('#email-select').on('change', function() {
 				var selectVal = $(this).val();
 				if(selectVal == 'direct') {
-					$('#email-tail').val('').focus().attr('readonly', false);
+					$('#mb_email2').val('').focus().attr('readonly', false);
 				} else {
-					$('#email-tail').val(selectVal).attr('readonly', true);
+					$('#mb_email2').val(selectVal).attr('readonly', true);
 				}
-				
-			})
+			});
 
 		</script>
 	</body>

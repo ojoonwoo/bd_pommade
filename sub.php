@@ -109,6 +109,25 @@
                                 </div>
                             </div>
                         </div>
+                        <div class="input-box email">
+							<div class="row">
+								<div class="label">
+									<span>이메일</span>
+								</div>
+								<div class="input email">
+									<input type="text" id="mb_email1">
+									<span>@</span>
+									<input type="text" id="mb_email2">
+									<select name="" id="email-select">
+										<option value="direct">직접 입력</option>
+										<option value="naver.com">naver.com</option>
+										<option value="gmail.com">gmail.com</option>
+										<option value="daum.net">daum.net</option>
+										<option value="nate.com">nate.com</option>
+									</select>
+								</div>
+							</div>
+                        </div>
                         <div class="agree-box">
                             <div class="agree1">
                                 <span>개인 정보 수집 및 이용에 동의합니다</span>
@@ -182,6 +201,16 @@
     		// console.log(claimType);
 		});
     });
+		
+		$('#email-select').on('change', function() {
+			var selectVal = $(this).val();
+			if(selectVal == 'direct') {
+				$('#mb_email2').val('').focus().attr('readonly', false);
+			} else {
+				$('#mb_email2').val(selectVal).attr('readonly', true);
+			}
+		});
+
 	
     </script>
 </body>
