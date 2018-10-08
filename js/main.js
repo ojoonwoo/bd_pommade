@@ -484,7 +484,7 @@ function sns_share(media, flag)
 			}
 		});
 	}else if (media == "kt"){
-		Kakao.init('dce5eef1bd9bc3b9221ded3459d746ef');
+		Kakao.init('f5ac4c6fbfcacd558c57ec5a05738a4e');
 
 		Kakao.Link.sendDefault({
 			objectType: 'feed',

@@ -7,7 +7,9 @@
 				<div class="header-wrap">
 					<div class="inner">
 						<h1 class="logo">
-							<img src="./images/header_logo.png" alt="로고">
+							<a href="index.php">
+								<img src="./images/header_logo.png" alt="로고">
+							</a>
 						</h1>
 						<div class="share-area">
 							<button class="fb"></button>
@@ -49,7 +51,9 @@
 							<p>전국 올리브영 매장 바이오더마 코너에서 만나 보실 수 있습니다</p>
 						</div>
 						<div class="btn-area">
-							<button type="button">포마드로 A/S 경험하기</button>
+							<a href="sub.php">
+								<button type="button">포마드로 A/S 경험하기</button>
+							</a>
 						</div> 
 					</div>
 				</div>
