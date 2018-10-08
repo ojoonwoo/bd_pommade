@@ -1344,6 +1344,6 @@ html.popup-opened {
 }
 @media all and (max-height: 780px) {
 	.content.main .notice-wrap {
-		display: none;
+/*		display: none;*/
 	}
 }

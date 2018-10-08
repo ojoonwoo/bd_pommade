@@ -19,7 +19,7 @@ if ($mobileYN == "MOBILE")
 include_once "head.php";
 ?>
 <body>
-	<div class="container" style="height: 100%">
+	<div class="container">
 		<div class="content main">
 			<div class="header-wrap">
 				<div class="inner">
@@ -38,16 +38,17 @@ include_once "head.php";
 				<div class="inner">
 					<div class="desc-area">
 						<span class="sub-text">바이오더마 포마드 -  <small>Cicabio Pommade</small></span>
-						<div class="title-group">
-							<img src="./images/title_image.png" alt="" class="neon-title">
-							<img src="./images/title_on_image.png" alt="" class="neon-on-title">
-						</div>
+						<img src="./images/title_image.png" alt="" class="neon-title">
+						<img src="./images/title_on_image.png" alt="" class="neon-on-title">
 						<span class="desc1">불만족스러웠던 기존의 시카 제품들!</span>
 						<span class="desc2">바이오더마의 특허 다프 성분과 안탈지신 기술이 담긴<br>포마드로 A/S 받으세요!</span>
-						<div class="btn-area">
-							<button type="button" class="give" onclick="go_link('sub.php')"><span>무료 A/S 받기</span></button>
-							<button type="button" class="find" onclick="go_link('info.php')"><span>시카 A/S 알아보기</span></button>
-						</div>
+					</div>
+					<div class="btn-area">
+						<button type="button" class="give" onclick="go_link('sub.php')">무료 A/S 받기</button><br>
+						<button type="button" class="find" onclick="go_link('info.php')">시카 A/S 알아보기</button>
+					</div>
+					<div class="goods-area">
+						<img src="./images/goods_img.png" alt="">
 					</div>
 					<div class="share-area">
 						<button class="fb"></button>
@@ -76,7 +77,7 @@ include_once "head.php";
 			tl.play();
 
 			setTimeout(function(){
-				//				tl2.to($(".goods-area"), 1, {alpha:1})
+				tl2.to($(".goods-area"), 1, {alpha:1})
 				tl2.play();
 			},1500);
 
