@@ -76,7 +76,7 @@ include_once "head.php";
 			tl.play();
 
 			setTimeout(function(){
-//				tl2.to($(".goods-area"), 1, {alpha:1})
+				//				tl2.to($(".goods-area"), 1, {alpha:1})
 				tl2.play();
 			},1500);
 
