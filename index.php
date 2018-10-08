@@ -81,7 +81,7 @@
             tl2.play();
         },1500);
 		
-//		getNoticeInfo('0');
+		// getNoticeInfo('0');
     });
 //		var $noticeWrap = $('.notice-wrap .inner');
 //		var $noticeSpan = $('.notice-wrap span');
