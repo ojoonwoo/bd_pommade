@@ -24,7 +24,9 @@ include_once "head.php";
 			<div class="header-wrap">
 				<div class="inner">
 					<h1>
-						<img src="./images/logo.png" alt="로고">
+                        <a href="index.php">
+                            <img src="./images/logo.png" alt="로고">
+                        </a>
 					</h1>
 				</div>
 			</div>
