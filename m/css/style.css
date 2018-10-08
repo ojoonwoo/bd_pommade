@@ -502,7 +502,7 @@ html, body {
 	color: #eabdff;
 	font-size: 10px;
 }
-.content.sub .receipt-form .input-group.email select::-ms-expend {
+.content.sub .receipt-form .input-group.email select::-ms-expand {
 	display: none;
 }
 .content.sub .receipt-form .agree-wrap {
