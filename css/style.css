@@ -47,6 +47,7 @@ html, body {
 	background: url(../images/main_bg.png) no-repeat center 0;
 	background-size: auto;
 	width: 100%;
+	overflow: hidden;
 }
 .content.main .header-wrap {
 	height: 116px;
@@ -210,6 +211,7 @@ html, body {
 /*	background-size: auto;*/
 	background-size: cover;
 	width: 100%;
+	overflow: hidden;
 }
 .content.sub .header-wrap {
 	height: 116px;
@@ -608,6 +610,9 @@ html, body {
 	-webkit-appearance: none;
 	-moz-appearance: none;
 	appearance: none;
+}
+.content.sub .content-wrap .inner .input-area .input-box .row .input.email select::-ms-expand {
+	display: none;
 }
 .content.sub .content-wrap .inner .input-area .agree-box {
 	font-family: 'Noto Sans Korean';
