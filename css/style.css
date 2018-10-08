@@ -857,6 +857,24 @@ html, body {
 	font-size: 11px;
 	color: #fff;
 }
+.content.info .content-wrap .inner .share-area {
+	position: absolute;
+	width: 35px;
+	bottom: 0;
+	right: -95px;
+}
+.content.info .content-wrap .inner .share-area .fb {
+	background: url(../images/share_fb.png) no-repeat center 0;
+	width: 34px;
+	height: 35px;
+	margin-bottom: 10px;
+}
+.content.info .content-wrap .inner .share-area .kt {
+	background: url(../images/share_kt.png) no-repeat center 0;
+	width: 34px;
+	height: 35px;
+}
+
 /*popup*/
 html.menu-opened,
 html.popup-opened {

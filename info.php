@@ -46,7 +46,13 @@
                         <p>전국 올리브영 매장 바이오더마 코너에서 만나 보실 수 있습니다</p>
                     </div>
                     <div class="btn-area">
-                        <button type="button">포마드로 A/S 경험하기</button>
+                        <a href="sub.php">
+                            <button type="button">포마드로 A/S 경험하기</button>
+                        </a>
+                    </div>
+                    <div class="share-area">
+                        <button class="fb"></button>
+                        <button class="kt"></button>
                     </div>
                 </div>
             </div>
