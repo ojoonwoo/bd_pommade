@@ -39,7 +39,7 @@
 							</div>
 							<div class="desc-wrap">
 								<span class="desc desc1">바이오더마의 특허 성분과 기술이 담긴 포마드로</span>
-								<span class="desc desc2">불만족스러웠던 기존의 시카 A/S 받으세요!</span>
+								<span class="desc desc2">불만족스러웠던 기존의 시카 A/S 받으세요<i>!</i></span>
 							</div>
 						</div>
 						<div class="wrap">
