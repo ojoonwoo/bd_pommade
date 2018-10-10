@@ -55,7 +55,7 @@
 				</div>
 				<div class="footer-wrap">
 					<div class="inner">
-						<p><a href="#">바이오더마 소개</a> | <a href="#">온라인 고객센터</a></p>
+						<p><a href="http://www.bioderma.co.kr/page/brand_philosophy.php" target="_blank">바이오더마 소개</a> | <a href="http://www.bioderma.co.kr/front/board.php?bbs_id=notice" target="_blank">온라인 고객센터</a></p>
 						<p>나오스코리아 유한회사 | 대표: 장이브데모트</p>
 						<p>사업자등록번호: 214-88-79685 (사업자정보확인)</p>
 						<p>주소: 서울특별시 서초구 서초중앙로 138 우림빌딩 7층 나오스코리아 유한회사</p>
