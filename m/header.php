@@ -6,8 +6,8 @@
 							</a>
 						</h1>
 						<div class="share-area">
-							<button class="fb"></button>
-							<button class="kt"></button>
+							<button class="fb" onclick="sns_share('fb', 'main')"></button>
+							<button class="kt" onclick="sns_share('kt', 'main')"></button>
 						</div>
 					</div>
 				</div>
