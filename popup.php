@@ -101,7 +101,7 @@
                     <p>처리하고 있습니다.</p>
                     <br>
                     <p class="items first">◎수탁자 : 미니버타이징(주)</p>
-                    <p class="items">◎위탁하는 업무의 내용 : 이벤트 당첨자 확인, 경품발송, MMS발송</p>
+                    <p class="items">◎위탁하는 업무의 내용 : 이벤트 당첨자 확인, 경품발송, MMS발송, 이메일발송</p>
                     <p class="small first">수탁업체가 제공받은 귀하의 개인정보는 당사의 개인정보보호정책에</p>
                     <p class="small">따라 안전하게 관리됩니다.</p>
                     </div>

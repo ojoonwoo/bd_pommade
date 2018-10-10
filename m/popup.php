@@ -43,7 +43,7 @@
 		</div>
 	</div>
 </div>		
-<div class="popup pt-agree" id="pt-agree1">
+<div class="popup pt-agree" id="pt-agree2">
 	<button type="button" class="popup-close" data-popup="@close"></button>
 	<div class="inner">
 		<div class="title-area">
@@ -65,7 +65,7 @@
 	</div>
 </div>
 
-<div class="popup pt-agree" id="pt-agree2">
+<div class="popup pt-agree" id="pt-agree1">
 	<button type="button" class="popup-close" data-popup="@close"></button>
 	<div class="inner">
 		<div class="title-area">
@@ -76,7 +76,7 @@
 			<div class="desc-inner">
 				<p style="margin-bottom: 5px;">당사는 원활한 행사진행을 위하여 아래의 전문업체에 업무를 위탁 처리하고 있습니다.</p>
 				<p class="items first">◎수탁자 : 미니버타이징(주)</p>
-				<p class="items" style="margin-bottom: 5px;">◎위탁하는 업무의 내용 : 이벤트 당첨자 확인, 경품발송, MMS발송</p>
+				<p class="items" style="margin-bottom: 5px;">◎위탁하는 업무의 내용 : 이벤트 당첨자 확인, 경품발송, MMS발송, 이메일발송</p>
 				<p class="small first">수탁업체가 제공받은 귀하의 개인정보는 당사의 개인정보보호정책에 따라 안전하게 관리됩니다.</p>
 			</div>
 		</div>
