@@ -875,10 +875,10 @@ html.popup-opened body {
 .popup.pt-result .result-text .result-image {
 	text-align: center;
 }
-.popup.pt-result .result-text .result-image img._1 {width: 270px;}
+.popup.pt-result .result-text .result-image img._1 {width: 222px;}
 .popup.pt-result .result-text .result-image img._2 {width: 220px;}
 .popup.pt-result .result-text .result-image img._3 {width: 206px;}
-.popup.pt-result .result-text .result-image img._4 {width: 200px;}
+.popup.pt-result .result-text .result-image img._4 {width: 270px;}
 .popup.pt-result .btn-area {
 	padding: 33px 0 26px;
 	background: #642d77;
