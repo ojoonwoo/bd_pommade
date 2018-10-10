@@ -249,9 +249,11 @@ function info_submit() {
 	}
 	if (mb_mail1 == "") {
 		alert("메일주소를 입력해주세요");
+		return false;
 	}
 	if (mb_mail2 == "") {
 		alert("메일주소를 입력해주세요");
+		return false;
 	}
 
 	if ($("#mb_agree1").is(":checked") === false)
@@ -290,7 +292,7 @@ function info_submit() {
 				$("#req_name").html(mb_name);
 				$("#req_goods").html(cutStr(claim_goods));
 				$("#req_req").html(claimName);
-				$(".result-image img").attr("src","./images/popup_result"+claimType+".png");
+				$(".result-image img").attr('class', '_'+claimType).attr("src","./images/popup_result"+claimType+".png");
 				pommd.popup.show($("#pt-result"));
 			}else if (response == "D") {
 				alert("이미 참여하셨습니다. 감사합니다!");
@@ -392,6 +394,13 @@ function lengthCheck(obj, ln) {
 		}
 	}
 }
+function chk_hangul(obj) { 
+	var $obj = $(obj);
+	if (!(event.keyCode >=37 && event.keyCode<=40)) {
+		var inputVal = $obj.val();
+		$obj.val(inputVal.replace(/[^a-z0-9]/gi,''));
+	}
+}
 
 function confirm_close()
 {
@@ -406,7 +415,7 @@ function sns_share(media, flag)
 {
 	if (media == "fb")
 	{
-        var newWindow = window.open('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent('http://www.atodermcare.com/?media=share_fb'),'sharer','toolbar=0,status=0,width=600,height=325');
+        var newWindow = window.open('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent('http://www.pommadecare.com/?media=share_fb'),'sharer','toolbar=0,status=0,width=600,height=325');
 
 		$.ajax({
 			type   : "POST",
@@ -419,24 +428,27 @@ function sns_share(media, flag)
 			}
 		});
 	}else if (media == "kt"){
-		Kakao.init('dce5eef1bd9bc3b9221ded3459d746ef');
+		Kakao.init('f5ac4c6fbfcacd558c57ec5a05738a4e');
+
 		Kakao.Link.sendDefault({
 			objectType: 'feed',
 			content: {
-				title: '당신의 스킨도 이제는 체력 관리가 필요하니까! 지금 바이오더마에서 당신에게 필요한 무료 스킨 PT를 받아보세요!',
+				// title: '불만족스러웠던 기존의 시카 제품들, 해결되지 않던 당신의 피부 고민!\n\n바이오더마의 특허 다프 성분과 안탈지신 기술을 담아 오랜 연구 끝에 탄생한 바이오더마 포마드로 A/S 받으세요!',
+				title: '',
+				description: '불만족스러웠던 기존의 시카 제품들,\n해결되지 않던 당신의 피부 고민!\n바이오더마의 특허 성분과 기술이 담긴\n포마드로 A/S 받으세요!',
 				// description: '#케익 #딸기 #삼평동 #카페 #분위기 #소개팅',
-				imageUrl: "http://www.atodermcare.com/images/kakao_share2.jpg",
+				imageUrl: "http://www.pommadecare.com/images/kakao_share2.jpg",
 				link: {
-					mobileWebUrl: 'http://www.atodermcare.com/m/index.php?media=share_fb',
-					webUrl: 'http://www.atodermcare.com/?media=share_fb'
+					mobileWebUrl: 'http://www.pommadecare.com/m/index.php?media=share_fb',
+					webUrl: 'http://www.pommadecare.com/?media=share_fb'
 				}
 			},
 			buttons: [
 				{
 					title: '웹으로 보기',
 					link: {
-						mobileWebUrl: 'http://www.atodermcare.com/m/index.php?media=share_fb',
-						webUrl: 'http://www.atodermcare.com/?media=share_fb'
+						mobileWebUrl: 'http://www.pommadecare.com/m/index.php?media=share_fb',
+						webUrl: 'http://www.pommadecare.com/?media=share_fb'
 					}
 				}
 			],

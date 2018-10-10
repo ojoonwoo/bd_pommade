@@ -4,19 +4,9 @@
 	<body>
 		<div class="container">
 			<div class="content sub">
-				<div class="header-wrap">
-					<div class="inner">
-						<h1 class="logo">
-							<a href="index.php">
-								<img src="./images/header_logo.png" alt="로고">
-							</a>
-						</h1>
-						<div class="share-area">
-							<button class="fb"></button>
-							<button class="kt"></button>
-						</div>
-					</div>
-				</div>
+<?
+	include_once "header.php";
+?>				
 				<div class="content-wrap">
 					<div class="inner">
 						<div class="notice-area">
@@ -120,7 +110,7 @@
 									</div>
 								</div>
 								<div class="input-group tel">
-									<div class="guide">번 호</div>
+									<div class="guide">전화 번호</div>
 									<div class="input">
 										<input type="tel" id="mb_phone1" onkeyup="lengthCheck(this, 3)">
 										<span>-</span>
@@ -145,7 +135,7 @@
 								<div class="input-group email">
 									<div class="guide">이메일</div>
 									<div class="input">
-										<input type="text" id="mb_email1">
+										<input type="text" id="mb_email1" onkeyup="chk_hangul(this)">
 										<span>@</span>
 										<input type="text" id="mb_email2">
 									</div>
@@ -190,11 +180,11 @@
 				</div>
 				<div class="footer-wrap">
 					<div class="inner">
-						<p><a href="#">바이오더마 소개</a> | <a href="#">온라인 고객센터</a></p>
+						<p><a href="http://www.bioderma.co.kr/page/brand_philosophy.php" target="_blank"><b>바이오더마 소개</b></a> | <a href="http://www.bioderma.co.kr/front/board.php?bbs_id=notice" target="_blank"><b>온라인 고객센터</b></a></p>
 						<p>나오스코리아 유한회사 | 대표: 장이브데모트</p>
 						<p>사업자등록번호: 214-88-79685 (사업자정보확인)</p>
 						<p>주소: 서울특별시 서초구 서초중앙로 138 우림빌딩 7층 나오스코리아 유한회사</p>
-						<p>개인정보책임자: 김민정 | 이벤트 안내 번호: 02-523-7676</p>
+						<p>개인정보책임자: 김민정 | 고객 센터: 02-523-7676</p>
 						<p>통신판매업신고번호: 2015-서울서초-0215 | E-MAIL: bioderma@bioderma.kr</p>
 						<p>©2018  BIODERMA.  ALL RIGHT RESERVED.</p>
 					</div>
@@ -208,7 +198,7 @@
 			<img src="//i1.daumcdn.net/localimg/localimages/07/postcode/320/close.png" id="btnCloseLayer" style="width:7%;cursor:pointer;position:absolute;right:-3px;top:-3px;z-index:1" onclick="closeDaumPostcode()" alt="닫기 버튼">
 		</div>
 
-		<input type="button" id="sample-btn" data-popup="#pt-agree2">
+		<input type="button" id="sample-btn" data-popup="#pt-result">
 		<script>
 			var claimType = "";
 			var claimName = "";

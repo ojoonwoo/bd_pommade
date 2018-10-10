@@ -222,10 +222,9 @@ html, body {
 }
 
 .content.main .footer-wrap {
-/*	padding-top: 56%;*/
 	padding-top: 62%;
-	padding-left: 5.8%;
-/*	padding-top: 148px;*/
+	/* padding-left: 5.8%; */
+	text-align: center;
 }
 .content .footer-wrap .inner {
 	/* height: 188px; */
@@ -431,12 +430,12 @@ html, body {
 	font-family: 'NotoSansKR-DemiLight';
 	font-size: 12px;
 	color: #eabdff;
-	width: 15.4%;
+	width: 18.4%;
 }
 .content.sub .receipt-form .input-group .input {
 	display: inline-block;
 	vertical-align: middle;
-	width: 84.6%;
+	width: 81.6%;
 }
 .content.sub .receipt-form .input-group .input input[type="text"],
 .content.sub .receipt-form .input-group .input input[type="tel"] {
@@ -578,7 +577,8 @@ html, body {
 .content.sub .footer-wrap {
 /*	background: rgba(79, 31, 103, 0.26);*/
 	background: rgb(79, 31, 103);
-	padding-left: 5.8%;
+	/* padding-left: 5.8%; */
+	text-align: center;
 }
 .content.info .content-wrap {
 	padding-bottom: 36px;
@@ -866,9 +866,10 @@ html.popup-opened body {
 .popup.pt-result .result-text .result-image {
 	text-align: center;
 }
-.popup.pt-result .result-text .result-image img._1 {
-	width: 200px;
-}
+.popup.pt-result .result-text .result-image img._1 {width: 270px;}
+.popup.pt-result .result-text .result-image img._2 {width: 220px;}
+.popup.pt-result .result-text .result-image img._3 {width: 206px;}
+.popup.pt-result .result-text .result-image img._4 {width: 200px;}
 .popup.pt-result .btn-area {
 	padding: 33px 0 26px;
 	background: #642d77;

@@ -24,8 +24,13 @@ include_once "head.php";
 			<div class="header-wrap">
 				<div class="inner">
 					<h1>
-						<img src="./images/logo.png" alt="로고">
-					</h1>
+                        <a href="index.php">
+                            <img src="./images/logo.png" alt="로고">
+                        </a>
+                    </h1>
+<?
+    include_once "share_area.php";
+?>                    
 				</div>
 			</div>
 			<div class="notice-wrap">
@@ -40,8 +45,8 @@ include_once "head.php";
 						<span class="sub-text">바이오더마 포마드 -  <small>Cicabio Pommade</small></span>
 						<img src="./images/title_image.png" alt="" class="neon-title">
 						<img src="./images/title_on_image.png" alt="" class="neon-on-title">
-						<span class="desc1">불만족스러웠던 기존의 시카 제품들!</span>
-						<span class="desc2">바이오더마의 특허 다프 성분과 안탈지신 기술이 담긴<br>포마드로 A/S 받으세요!</span>
+						<!-- <span class="desc1">바이오더마의 특허 성분과 기술이 담긴 포마드로</span> -->
+						<span class="desc2">바이오더마의 특허 성분과 기술이 담긴 포마드로<br>불만족스러웠던 기존의 시카 A/S 받으세요<i>!</i></span>
 					</div>
 					<div class="btn-area">
 						<button type="button" class="give" onclick="go_link('sub.php')">무료 A/S 받기</button><br>
@@ -49,19 +54,18 @@ include_once "head.php";
 					</div>
 					<div class="goods-area">
 						<img src="./images/goods_img.png" alt="">
-					</div>
-					<div class="share-area">
-						<button class="fb"></button>
-						<button class="kt"></button>
-					</div>
+                    </div>
+<?
+    // include_once "share_area.php";
+?>                    
 				</div>
 			</div>
 			<div class="footer-wrap">
 				<div class="inner">
-					<p>바이오더마 소개 | 온라인 고객센터</p>
+					<p><a href="http://www.bioderma.co.kr/page/brand_philosophy.php" target="_blank"><b>바이오더마 소개</b></a> | <a href="http://www.bioderma.co.kr/front/board.php?bbs_id=notice" target="_blank"><b>온라인 고객센터</b></a></p>
 					<p>나오스코리아 유한회사 | 대표: 장이브데모트 | 사업자등록번호: 214-88-79685 (사업자정보확인)</p>
 					<p>주소: 서울특별시 서초구 서초중앙로 138 우림빌딩 7층 나오스코리아 유한회사 | 개인정보책임자: 김민정</p>
-					<p>이벤트 안내 번호: 02-523-7676 | 통신판매업신고번호: 2015-서울서초-0215 | E-MAIL: bioderma@bioderma.kr</p>
+					<p>고객 센터: 02-523-7676 | 통신판매업신고번호: 2015-서울서초-0215 | E-MAIL: bioderma@bioderma.kr</p>
 					<p>©2018  BIODERMA.  ALL RIGHT RESERVED.</p>
 				</div>
 			</div>
@@ -69,12 +73,12 @@ include_once "head.php";
 	</div>
 	<script>
 		$(window).on('load', function() {
-			var tl = new TimelineMax();
-			var tl2 = new TimelineMax();
-			// tl.to($(".neon-on-title"), 5, {autoAlpha:1, repeat:1, yoyo:true, ease: Linear.easeNone}, 0);
+			// var tl = new TimelineMax();
+			// var tl2 = new TimelineMax();
+			// // tl.to($(".neon-on-title"), 5, {autoAlpha:1, repeat:1, yoyo:true, ease: Linear.easeNone}, 0);
+			// // tl.play();
+			// tl.to($(".neon-on-title"), 0.3, {alpha:0, repeatDelay:0.3, repeat:-1, yoyo:true})
 			// tl.play();
-			tl.to($(".neon-on-title"), 0.3, {alpha:0, repeatDelay:0.3, repeat:-1, yoyo:true})
-			tl.play();
 
 			setTimeout(function(){
 				tl2.to($(".goods-area"), 1, {alpha:1})
