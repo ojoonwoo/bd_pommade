@@ -84,8 +84,8 @@
 												<img src="./images/sub_checklist_ellipse.png" alt="">
 											</div>
 											<div class="desc">
-												기본적인 피부 재생이
-												해결되지 않음
+												손상* 피부 개선이 
+												만족스럽지 않음
 											</div>
 										</li>
 										<li>
