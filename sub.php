@@ -117,9 +117,9 @@
 									<span>이메일</span>
 								</div>
 								<div class="input email">
-									<input type="text" id="mb_email1">
+									<input type="text" id="mb_email1" onkeyup="chk_hangul(this)">
 									<span>@</span>
-									<input type="text" id="mb_email2">
+									<input type="text" id="mb_email2" onkeyup="chk_hangul(this)">
 									<select name="" id="email-select">
 										<option value="direct">직접 입력</option>
 										<option value="naver.com">naver.com</option>

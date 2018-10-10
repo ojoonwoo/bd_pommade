@@ -327,10 +327,11 @@ function cutStr(limitText)
 		// str2 = strValue;
 	// }
 	str2 = strValue.substr(0, 1);
-	resultStr = str2;
-	for (var j = 1; j < len; j++) {
-		resultStr += "O";
-	}
+	resultStr = str2+"0000";
+	// resultStr = str2;
+	// for (var j = 1; j < len; j++) {
+	// 	resultStr += "O";
+	// }
 	return resultStr;
 }
 function is_hangul_char(ch){
@@ -457,7 +458,13 @@ function lengthCheck(obj, ln) {
 		}
 	}
 }
-
+function chk_hangul(obj) { 
+	var $obj = $(obj);
+	if (!(event.keyCode >=37 && event.keyCode<=40)) {
+		var inputVal = $obj.val();
+		$obj.val(inputVal.replace(/[^a-z0-9]/gi,''));
+	}
+}
 function confirm_close()
 {
 	if (confirm("창을 닫으시면 이벤트 참여가 취소됩니다. 닫으시겠습니까?"))

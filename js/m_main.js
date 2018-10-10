@@ -394,6 +394,13 @@ function lengthCheck(obj, ln) {
 		}
 	}
 }
+function chk_hangul(obj) { 
+	var $obj = $(obj);
+	if (!(event.keyCode >=37 && event.keyCode<=40)) {
+		var inputVal = $obj.val();
+		$obj.val(inputVal.replace(/[^a-z0-9]/gi,''));
+	}
+}
 
 function confirm_close()
 {

@@ -135,9 +135,9 @@
 								<div class="input-group email">
 									<div class="guide">이메일</div>
 									<div class="input">
-										<input type="text" id="mb_email1">
+										<input type="text" id="mb_email1" onkeyup="chk_hangul(this)">
 										<span>@</span>
-										<input type="text" id="mb_email2">
+										<input type="text" id="mb_email2" onkeyup="chk_hangul(this)">
 									</div>
 								</div>
 								<div class="input-group email">
