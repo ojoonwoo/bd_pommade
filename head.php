@@ -7,7 +7,7 @@
     <meta property="og:type" content="website" />
     <meta property="og:title" content="바이오더마 시카 A/S센터" />
     <meta property="og:url" content="http://www.pommadecare.com" />
-    <meta property="og:image" content="http://www.pommadecare.com/images/share_img.jpg" />
+    <meta property="og:image" content="http://www.pommadecare.com/images/share_img2.jpg" />
     <meta property="og:description" content="불만족스러웠던 기존의 시카! 지금 바이오더마 포마드로 A/S 받으세요." />
 	<link rel="stylesheet" href="./css/reset.css">
 	<link rel="stylesheet" href="./css/style.css">
