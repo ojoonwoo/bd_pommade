@@ -395,11 +395,16 @@ function lengthCheck(obj, ln) {
 	}
 }
 function chk_hangul(obj) { 
-	var $obj = $(obj);
-	if (!(event.keyCode >=37 && event.keyCode<=40)) {
-		var inputVal = $obj.val();
-		$obj.val(inputVal.replace(/[^a-z0-9]/gi,''));
-	}
+	// var $obj = $(obj);
+	// if (!(event.keyCode >=37 && event.keyCode<=40)) {
+	// 	var inputVal = $obj.val();
+	// 	$obj.val(inputVal.replace(/[^a-z0-9]/gi,''));
+	// }
+	//좌우 방향키, 백스페이스, 딜리트, 탭키에 대한 예외
+	if(event.keyCode == 8 || event.keyCode == 9 || event.keyCode == 37 || event.keyCode == 39
+        || event.keyCode == 46 ) return;
+        //obj.value = obj.value.replace(/[\a-zㄱ-ㅎㅏ-ㅣ가-힣]/g, '');
+        obj.value = obj.value.replace(/[\ㄱ-ㅎㅏ-ㅣ가-힣]/g, '');
 }
 
 function confirm_close()
