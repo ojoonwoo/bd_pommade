@@ -212,7 +212,7 @@
 			var search_addr1	= "";
 
 			$(window).on('load', function() {
-				// $('#sample-btn').trigger('click');
+				$('#sample-btn').trigger('click');
 
 				// $('.checkType .check').on('click', function() {
 				// 	var $parent = $(this).parent().parent();

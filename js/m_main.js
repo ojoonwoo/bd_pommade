@@ -341,10 +341,11 @@ function cutStr(limitText)
 		// str2 = strValue;
 	// }
 	str2 = strValue.substr(0, 1);
-	resultStr = str2;
-	for (var j = 1; j < len; j++) {
-		resultStr += "O";
-	}
+	resultStr = str2+"0000";
+	// resultStr = str2;
+	// for (var j = 1; j < len; j++) {
+	// 	resultStr += "O";
+	// }
 	return resultStr;
 }
 function is_hangul_char(ch){
