@@ -17,7 +17,7 @@
 			</div>
 			<div class="box ap_goods">
 				<div class="label">
-					<span>신청 제품</span>
+					<span>불만족 제품</span>
 				</div>
 				<div class="rs_req">
 					<span id="req_goods">이OOOO</span>
@@ -25,7 +25,7 @@
 			</div>
 			<div class="box ap_req">
 				<div class="label">
-					<span>요구 사항</span>
+					<span>개선 사항</span>
 				</div>
 				<div class="rs_req">
 					<span id="req_req">진정력</span>

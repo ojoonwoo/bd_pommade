@@ -81,10 +81,13 @@ switch ($_REQUEST['exec'])
 		$query = "SELECT idx, mb_name FROM member_info ORDER BY mb_regdate DESC LIMIT 1";
 		$result 	= mysqli_query($my_db, $query);
 		
-		if ($result)
-			$rsData = mysqli_fetch_array($result);
-		else
-			$rsData = "N";
+        if ($result)
+        {
+            $rsData = mysqli_fetch_array($result);
+            $rsData["mb_name"] = $mnv_f->mytory_asterisk($rsData["mb_name"]);
+        }else{
+            $rsData = "N";
+        }
 		
 		echo json_encode($rsData);
     break;
