@@ -55,6 +55,9 @@
                             <button type="button">포마드로 A/S 경험하기</button>
                         </a>
                     </div>
+                    <div>
+                        <img src="./images/info_product.png" alt="">
+                    </div>
 <?
     // include_once "share_area.php";
 ?>                    

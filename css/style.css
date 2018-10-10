@@ -137,8 +137,10 @@ html, body {
 }
 .content.main .content-wrap .inner .desc-area .neon-on-title {
 	position: absolute;
-	top: 116px;
-	left: 44px;
+	/* top: 116px;
+	left: 44px; */
+	top: 92px;
+	left: 20px;
 }
 .content.main .content-wrap .inner .desc-area .desc1 {
 	display: block;
@@ -837,10 +839,10 @@ html, body {
 .content.info .content-wrap .inner {
 	position: relative;
 	width: 1000px;
-	height: 752px;
+	/* height: 752px; */
 	margin: 0 auto;
 	text-align: center;
-	padding-bottom: 33px;
+	padding-bottom: 103px;
 }
 .content.info .content-wrap .inner .sub-title {
 	font-family: 'Noto Sans Korean';
@@ -852,8 +854,8 @@ html, body {
 }
 .content.info .content-wrap .inner .neon-on-title {
 	position: absolute;
-	top: 53px;
-	left: 252px;
+	top: 69px;
+	left: 256px;
 }
 .content.info .content-wrap .inner .desc-title {
 	font-family: 'Noto Sans Korean';
