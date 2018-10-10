@@ -151,10 +151,9 @@
                             <button type="button" onclick="info_submit();return false;">A/S 신청 접수</button>
                         </div>
                     </div>
-                    <div class="share-area">
-                        <button class="fb"></button>
-                        <button class="kt"></button>
-                    </div>
+<?
+    include_once "share_area.php";
+?>                    
                 </div>
             </div>
             <div class="footer-wrap">

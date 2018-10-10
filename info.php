@@ -52,10 +52,9 @@
                             <button type="button">포마드로 A/S 경험하기</button>
                         </a>
                     </div>
-                    <div class="share-area">
-                        <button class="fb"></button>
-                        <button class="kt"></button>
-                    </div>
+<?
+    include_once "share_area.php";
+?>                    
                 </div>
             </div>
             <div class="footer-wrap">

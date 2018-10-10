@@ -471,7 +471,7 @@ function sns_share(media, flag)
 {
 	if (media == "fb")
 	{
-        var newWindow = window.open('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent('http://www.atodermcare.com/?media=share_fb'),'sharer','toolbar=0,status=0,width=600,height=325');
+        var newWindow = window.open('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent('http://www.pommadecare.com/?media=share_fb'),'sharer','toolbar=0,status=0,width=600,height=325');
 
 		$.ajax({
 			type   : "POST",
@@ -489,20 +489,20 @@ function sns_share(media, flag)
 		Kakao.Link.sendDefault({
 			objectType: 'feed',
 			content: {
-				title: '당신의 스킨도 이제는 체력 관리가 필요하니까! 지금 바이오더마에서 당신에게 필요한 무료 스킨 PT를 받아보세요!',
+				title: '불만족스러웠던 기존의 시카 제품들, 해결되지 않던 당신의 피부 고민!r\nr\n바이오더마의 특허 다프 성분과 안탈지신 기술을 담아 오랜 연구 끝에 탄생한 바이오더마 포마드로 A/S 받으세요!',
 				// description: '#케익 #딸기 #삼평동 #카페 #분위기 #소개팅',
-				imageUrl: "http://www.atodermcare.com/images/kakao_share2.jpg",
+				imageUrl: "http://www.pommadecare.com/images/kakao_share.jpg",
 				link: {
-					mobileWebUrl: 'http://www.atodermcare.com/m/index.php?media=share_fb',
-					webUrl: 'http://www.atodermcare.com/?media=share_fb'
+					mobileWebUrl: 'http://www.pommadecare.com/m/index.php?media=share_fb',
+					webUrl: 'http://www.pommadecare.com/?media=share_fb'
 				}
 			},
 			buttons: [
 				{
 					title: '웹으로 보기',
 					link: {
-						mobileWebUrl: 'http://www.atodermcare.com/m/index.php?media=share_fb',
-						webUrl: 'http://www.atodermcare.com/?media=share_fb'
+						mobileWebUrl: 'http://www.pommadecare.com/m/index.php?media=share_fb',
+						webUrl: 'http://www.pommadecare.com/?media=share_fb'
 					}
 				}
 			],

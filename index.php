@@ -51,11 +51,10 @@ include_once "head.php";
 					</div>
 					<div class="goods-area">
 						<img src="./images/goods_img.png" alt="">
-					</div>
-					<div class="share-area">
-						<button class="fb"></button>
-						<button class="kt"></button>
-					</div>
+                    </div>
+<?
+    include_once "share_area.php";
+?>                    
 				</div>
 			</div>
 			<div class="footer-wrap">
