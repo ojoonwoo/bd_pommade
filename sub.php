@@ -183,7 +183,7 @@
     var search_zipcode	= "";
     var search_addr1	= "";
     $(window).on('load', function() {
-    	$('#sample-btn').trigger('click');
+    	// $('#sample-btn').trigger('click');
 
         var tl = new TimelineMax();
         var tl2 = new TimelineMax();
