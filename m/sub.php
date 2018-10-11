@@ -179,7 +179,7 @@
 								A/S 신청 접수
 							</button>
 							<div class="extra-notice">
-								<span>A/S는 포마드 샘플 소진 시까지만 진행됩니다</span>
+								<span>A/S 샘플 키트는 1가구당 1회에 한해 무상 진행됩니다</span>
 							</div>
 						</div>
 					</div>
