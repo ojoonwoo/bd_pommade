@@ -17,5 +17,15 @@
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"></script>
 		<script src="http://dmaps.daum.net/map_js_init/postcode.v2.js"></script>
         <script src="//developers.kakao.com/sdk/js/kakao.min.js"></script>
-		<title>BIODERMA - Pommade</title>
+        <title>BIODERMA - Pommade</title>
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-127294752-1"></script>
+        <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-127294752-1');
+        </script>
+
 	</head>
