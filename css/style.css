@@ -1337,6 +1337,9 @@ z-index: -1;
 	.content.main .header-wrap h1 img {
 		width: 130px;
 	}
+	.content.main .header-wrap .inner .share-area {
+		top: 28px;
+	}
 	.content.main .content-wrap .inner .desc-area .sub-text {
 		font-size: 23px;
 	}

@@ -24,7 +24,7 @@ include_once "head.php";
 			<div class="header-wrap">
 				<div class="inner">
 					<h1>
-                        <a href="index.php">
+                        <a href="index.php" onclick="gtag('event','click',{'event_label':'로고','event_category':'header'});">
                             <img src="./images/logo.png" alt="로고">
                         </a>
                     </h1>
@@ -49,8 +49,8 @@ include_once "head.php";
 						<span class="desc2">바이오더마의 특허 성분과 기술이 담긴 포마드로<br>불만족스러웠던 기존의 시카 A/S 받으세요<i>!</i></span>
 					</div>
 					<div class="btn-area">
-						<button type="button" class="give" onclick="go_link('sub.php')">무료 A/S 받기</button><br>
-						<button type="button" class="find" onclick="go_link('info.php')">시카 A/S 알아보기</button>
+						<button type="button" class="give" onclick="go_link('sub.php');gtag('event','click',{'event_label':'무료A/S받기','event_category':'main'});">무료 A/S 받기</button><br>
+						<button type="button" class="find" onclick="go_link('info.php');gtag('event','click',{'event_label':'시카A/S알아보기','event_category':'main'});">시카 A/S 알아보기</button>
 					</div>
 					<div class="goods-area">
 						<img src="./images/goods_img.png" alt="">
@@ -62,7 +62,7 @@ include_once "head.php";
 			</div>
 			<div class="footer-wrap">
 				<div class="inner">
-					<p><a href="http://www.bioderma.co.kr/page/brand_philosophy.php" target="_blank"><b>바이오더마 소개</b></a> | <a href="http://www.bioderma.co.kr/front/board.php?bbs_id=notice" target="_blank"><b>온라인 고객센터</b></a></p>
+					<p><a href="http://www.bioderma.co.kr/page/brand_philosophy.php" target="_blank" onclick="gtag('event','click',{'event_label':'바이오더마소개','event_category':'footer'});"><b>바이오더마 소개</b></a> | <a href="http://www.bioderma.co.kr/front/board.php?bbs_id=notice" target="_blank" onclick="gtag('event','click',{'event_label':'온라인고객센터','event_category':'footer'});"><b>온라인 고객센터</b></a></p>
 					<p>나오스코리아 유한회사 | 대표: 장이브데모트 | 사업자등록번호: 214-88-79685 (사업자정보확인)</p>
 					<p>주소: 서울특별시 서초구 서초중앙로 138 우림빌딩 7층 나오스코리아 유한회사 | 개인정보책임자: 김민정</p>
 					<p>고객 센터: 02-523-7676 | 통신판매업신고번호: 2015-서울서초-0215 | E-MAIL: bioderma@bioderma.kr</p>

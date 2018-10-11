@@ -90,10 +90,10 @@ html, body {
 	background: url(../images/share_fb.png) no-repeat center 0 / cover;
 }
 .content .header-wrap .inner .share-area .kt {
+	margin-right: 0;
 	background: url(../images/share_kt.png) no-repeat center 0 / cover;
 }
 .content .header-wrap .inner .share-area .insta {
-	margin-right: 0;
 	background: url(../images/share_insta.png) no-repeat center 0 / cover;
 }
 .content .notice-area {
