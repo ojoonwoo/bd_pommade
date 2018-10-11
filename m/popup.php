@@ -39,7 +39,7 @@
 		</div>
 		<div class="btn-area">
 			<button type="button" onclick="location.href='index.php';">신청 완료</button>
-			<p>A/S는 1가구당 1회에 한해 무상 진행됩니다</p>
+			<p>A/S 샘플 키트는 1가구당 1회에 한해 무상 진행됩니다</p>
 		</div>
 	</div>
 </div>		
