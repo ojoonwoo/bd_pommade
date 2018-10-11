@@ -8,6 +8,7 @@
 						<div class="share-area">
 							<button class="fb" onclick="sns_share('fb', 'main')"></button>
 							<button class="kt" onclick="sns_share('kt', 'main')"></button>
+							<button class="insta" onclick="location.href='https://www.instagram.com/bioderma_kr/'"></button>
 						</div>
 					</div>
 				</div>

@@ -45,6 +45,9 @@
 								<button type="button">포마드로 A/S 경험하기</button>
 							</a>
 						</div> 
+						<div class="info-img">
+							<img src="./images/info_img.png" alt="">
+						</div>
 					</div>
 				</div>
 				<div class="footer-wrap">
