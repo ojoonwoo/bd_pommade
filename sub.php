@@ -122,7 +122,7 @@
 								<div class="input email">
 									<input type="text" id="mb_email1" onkeyup="chk_hangul(this)">
 									<span>@</span>
-									<input type="text" id="mb_email2">
+									<input type="text" id="mb_email2" onkeyup="chk_hangul(this)">
 									<select name="" id="email-select">
 										<option value="direct">직접 입력</option>
 										<option value="naver.com">naver.com</option>
@@ -152,6 +152,9 @@
                         </div>
                         <div class="btn-box">
                             <button type="button" onclick="info_submit();return false;">A/S 신청 접수</button>
+                        </div>
+                        <div class="extra-notice">
+                            <span>A/S는 포마드 샘플 소진 시까지만 진행됩니다</span>
                         </div>
                     </div>
 <?

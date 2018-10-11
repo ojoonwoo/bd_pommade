@@ -73,19 +73,19 @@ include_once "head.php";
 	</div>
 	<script>
 		$(window).on('load', function() {
-			// var tl = new TimelineMax();
-			// var tl2 = new TimelineMax();
-			// // tl.to($(".neon-on-title"), 5, {autoAlpha:1, repeat:1, yoyo:true, ease: Linear.easeNone}, 0);
-			// // tl.play();
-			// tl.to($(".neon-on-title"), 0.3, {alpha:0, repeatDelay:0.3, repeat:-1, yoyo:true})
+			var tl = new TimelineMax();
+			var tl2 = new TimelineMax();
+			// tl.to($(".neon-on-title"), 5, {autoAlpha:1, repeat:1, yoyo:true, ease: Linear.easeNone}, 0);
 			// tl.play();
+			tl.to($(".neon-on-title"), 0.3, {alpha:0, repeatDelay:0.3, repeat:-1, yoyo:true})
+			tl.play();
 
 			setTimeout(function(){
 				tl2.to($(".goods-area"), 1, {alpha:1})
 				tl2.play();
 			},1500);
 
-			//		getNoticeInfo('0');
+					// getNoticeInfo('0');
 		});
 		//		var $noticeWrap = $('.notice-wrap .inner');
 		//		var $noticeSpan = $('.notice-wrap span');

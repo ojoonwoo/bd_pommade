@@ -68,16 +68,25 @@ html, body {
 	top: 46px;
 	right: 0;
 }
+.content.main .header-wrap .inner .share-area .insta {
+	background: url(../images/share_insta.png) no-repeat center 0;
+	width: 34px;
+	height: 35px;
+	/* margin-bottom: 10px; */
+	/* margin-left: 6px; */
+}
 .content.main .header-wrap .inner .share-area .fb {
 	background: url(../images/share_fb.png) no-repeat center 0;
 	width: 34px;
 	height: 35px;
-	margin-bottom: 10px;
+	/* margin-bottom: 10px; */
+	margin-left: 6px;
 }
 .content.main .header-wrap .inner .share-area .kt {
 	background: url(../images/share_kt.png) no-repeat center 0;
 	width: 34px;
 	height: 35px;
+	margin-left: 6px;
 }
 
 .content.main .notice-wrap {
@@ -137,8 +146,10 @@ html, body {
 }
 .content.main .content-wrap .inner .desc-area .neon-on-title {
 	position: absolute;
-	top: 116px;
-	left: 44px;
+	/* top: 116px;
+	left: 44px; */
+	top: 92px;
+	left: 20px;
 }
 .content.main .content-wrap .inner .desc-area .desc1 {
 	display: block;
@@ -255,16 +266,24 @@ html, body {
 	top: 46px;
 	right: 0;
 }
+.content.sub .header-wrap .inner .share-area .insta {
+	background: url(../images/share_insta.png) no-repeat center 0;
+	width: 34px;
+	height: 35px;
+	/* margin-bottom: 10px; */
+}
 .content.sub .header-wrap .inner .share-area .fb {
 	background: url(../images/share_fb.png) no-repeat center 0;
 	width: 34px;
 	height: 35px;
-	margin-bottom: 10px;
+	/* margin-bottom: 10px; */
+	margin-left: 6px;
 }
 .content.sub .header-wrap .inner .share-area .kt {
 	background: url(../images/share_kt.png) no-repeat center 0;
 	width: 34px;
 	height: 35px;
+	margin-left: 6px;
 }
 
 .content.sub .notice-wrap {
@@ -725,7 +744,8 @@ html, body {
 	margin-top: 9px;
 }
 .content.sub .content-wrap .inner .input-area .btn-box {
-	margin: 20px 0 59px 0;
+	/* margin: 20px 0 59px 0; */
+	margin: 20px 0 0 0;
 }
 .content.sub .content-wrap .inner .input-area .btn-box button {
 	font-family: 'Noto Sans Korean';
@@ -738,6 +758,11 @@ html, body {
 	width: 221px;
 	height: 90px;
 	padding-left: 26px;
+}
+.content.sub .content-wrap .inner .input-area .extra-notice {
+	font-size: 12px;
+	color: #fff;
+	margin: 10px 0 30px 0;
 }
 
 .content.sub .content-wrap .inner .share-area .fb {
@@ -792,16 +817,24 @@ html, body {
 	top: 46px;
 	right: 0;
 }
+.content.info .header-wrap .inner .share-area .insta {
+	background: url(../images/share_insta.png) no-repeat center 0;
+	width: 34px;
+	height: 35px;
+	/* margin-bottom: 10px; */
+}
 .content.info .header-wrap .inner .share-area .fb {
 	background: url(../images/share_fb.png) no-repeat center 0;
 	width: 34px;
 	height: 35px;
-	margin-bottom: 10px;
+	/* margin-bottom: 10px; */
+	margin-left: 6px;
 }
 .content.info .header-wrap .inner .share-area .kt {
 	background: url(../images/share_kt.png) no-repeat center 0;
 	width: 34px;
 	height: 35px;
+	margin-left: 6px;
 }
 .content.info .notice-wrap {
 	background: url(../images/notice_bg.png) no-repeat center 0;
@@ -837,10 +870,10 @@ html, body {
 .content.info .content-wrap .inner {
 	position: relative;
 	width: 1000px;
-	height: 752px;
+	/* height: 752px; */
 	margin: 0 auto;
 	text-align: center;
-	padding-bottom: 33px;
+	padding-bottom: 103px;
 }
 .content.info .content-wrap .inner .sub-title {
 	font-family: 'Noto Sans Korean';
@@ -852,8 +885,8 @@ html, body {
 }
 .content.info .content-wrap .inner .neon-on-title {
 	position: absolute;
-	top: 53px;
-	left: 252px;
+	top: 69px;
+	left: 256px;
 }
 .content.info .content-wrap .inner .desc-title {
 	font-family: 'Noto Sans Korean';

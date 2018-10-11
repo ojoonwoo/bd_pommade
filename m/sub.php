@@ -73,7 +73,7 @@
 												보습력이 떨어짐
 											</div>
 										</li>
-										<li>
+										<li style="margin-bottom:5px">
 											<div class="check-wrap checkType">
 												<input type="checkbox" class="check" id="q1_chk4" data-value="4" data-name="손상케어">
 												<label for="q1_chk4"></label>
@@ -84,9 +84,12 @@
 												<img src="./images/sub_checklist_ellipse.png" alt="">
 											</div>
 											<div class="desc">
-												기본적인 피부 재생이
-												해결되지 않음
+												손상* 피부 개선이 
+												만족스럽지 않음
 											</div>
+										</li>
+										<li>
+											<span style="font-size:10px;letter-spacing:-1.1px">*질병을 진단, 치료, 경감, 처치 또는 예방 등의 의학적 효능,효과와 결부 되지 않음</span>
 										</li>
 									</ul>
 								</div>
@@ -137,7 +140,7 @@
 									<div class="input">
 										<input type="text" id="mb_email1" onkeyup="chk_hangul(this)">
 										<span>@</span>
-										<input type="text" id="mb_email2">
+										<input type="text" id="mb_email2" onkeyup="chk_hangul(this)">
 									</div>
 								</div>
 								<div class="input-group email">
@@ -175,6 +178,9 @@
 							<button class="btn-submit" onclick="info_submit();return false;">
 								A/S 신청 접수
 							</button>
+							<div class="extra-notice">
+								<span>A/S는 포마드 샘플 소진 시까지만 진행됩니다</span>
+							</div>
 						</div>
 					</div>
 				</div>
