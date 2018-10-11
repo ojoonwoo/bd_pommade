@@ -68,16 +68,25 @@ html, body {
 	top: 46px;
 	right: 0;
 }
+.content.main .header-wrap .inner .share-area .insta {
+	background: url(../images/share_insta.png) no-repeat center 0;
+	width: 34px;
+	height: 35px;
+	/* margin-bottom: 10px; */
+	/* margin-left: 6px; */
+}
 .content.main .header-wrap .inner .share-area .fb {
 	background: url(../images/share_fb.png) no-repeat center 0;
 	width: 34px;
 	height: 35px;
-	margin-bottom: 10px;
+	/* margin-bottom: 10px; */
+	margin-left: 6px;
 }
 .content.main .header-wrap .inner .share-area .kt {
 	background: url(../images/share_kt.png) no-repeat center 0;
 	width: 34px;
 	height: 35px;
+	margin-left: 6px;
 }
 
 .content.main .notice-wrap {
@@ -257,16 +266,24 @@ html, body {
 	top: 46px;
 	right: 0;
 }
+.content.sub .header-wrap .inner .share-area .insta {
+	background: url(../images/share_insta.png) no-repeat center 0;
+	width: 34px;
+	height: 35px;
+	/* margin-bottom: 10px; */
+}
 .content.sub .header-wrap .inner .share-area .fb {
 	background: url(../images/share_fb.png) no-repeat center 0;
 	width: 34px;
 	height: 35px;
-	margin-bottom: 10px;
+	/* margin-bottom: 10px; */
+	margin-left: 6px;
 }
 .content.sub .header-wrap .inner .share-area .kt {
 	background: url(../images/share_kt.png) no-repeat center 0;
 	width: 34px;
 	height: 35px;
+	margin-left: 6px;
 }
 
 .content.sub .notice-wrap {
@@ -800,16 +817,24 @@ html, body {
 	top: 46px;
 	right: 0;
 }
+.content.info .header-wrap .inner .share-area .insta {
+	background: url(../images/share_insta.png) no-repeat center 0;
+	width: 34px;
+	height: 35px;
+	/* margin-bottom: 10px; */
+}
 .content.info .header-wrap .inner .share-area .fb {
 	background: url(../images/share_fb.png) no-repeat center 0;
 	width: 34px;
 	height: 35px;
-	margin-bottom: 10px;
+	/* margin-bottom: 10px; */
+	margin-left: 6px;
 }
 .content.info .header-wrap .inner .share-area .kt {
 	background: url(../images/share_kt.png) no-repeat center 0;
 	width: 34px;
 	height: 35px;
+	margin-left: 6px;
 }
 .content.info .notice-wrap {
 	background: url(../images/notice_bg.png) no-repeat center 0;
