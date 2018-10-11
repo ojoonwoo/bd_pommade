@@ -11,6 +11,7 @@ $(function(){
 	var locationArray = location.href.split('/');
 	var currentLocation = locationArray[locationArray.length-1].split('.')[0];
 
+	Kakao.init('f5ac4c6fbfcacd558c57ec5a05738a4e');
 
 
 	var agree1 	= "N";
@@ -434,7 +435,6 @@ function sns_share(media, flag)
 			}
 		});
 	}else if (media == "kt"){
-		Kakao.init('f5ac4c6fbfcacd558c57ec5a05738a4e');
 
 		Kakao.Link.sendDefault({
 			objectType: 'feed',

@@ -151,7 +151,7 @@
                             </div>
                         </div>
                         <div class="btn-box">
-                            <button type="button" onclick="info_submit();return false;">A/S 신청 접수</button>
+                            <button type="button" onclick="info_submit();gtag('event','click',{'event_label':'A/S신청완료','event_category':'event'});return false;">A/S 신청 접수</button>
                         </div>
                         <div class="extra-notice">
                             <span>A/S는 포마드 샘플 소진 시까지만 진행됩니다</span>
@@ -164,7 +164,7 @@
             </div>
             <div class="footer-wrap">
                 <div class="inner">
-                    <p><a href="http://www.bioderma.co.kr/page/brand_philosophy.php" target="_blank"><b>바이오더마 소개</b></a> | <a href="http://www.bioderma.co.kr/front/board.php?bbs_id=notice" target="_blank"><b>온라인 고객센터</b></a></p>
+                    <p><a href="http://www.bioderma.co.kr/page/brand_philosophy.php" target="_blank" onclick="gtag('event','click',{'event_label':'바이오더마소개','event_category':'footer'});"><b>바이오더마 소개</b></a> | <a href="http://www.bioderma.co.kr/front/board.php?bbs_id=notice" target="_blank" onclick="gtag('event','click',{'event_label':'온라인고객센터','event_category':'footer'});"><b>온라인 고객센터</b></a></p>
                     <p>나오스코리아 유한회사 | 대표: 장이브데모트 | 사업자등록번호: 214-88-79685 (사업자정보확인)</p>
                     <p>주소: 서울특별시 서초구 서초중앙로 138 우림빌딩 7층 나오스코리아 유한회사 | 개인정보책임자: 김민정</p>
                     <p>고객 센터: 02-523-7676 | 통신판매업신고번호: 2015-서울서초-0215 | E-MAIL: bioderma@bioderma.kr</p>
