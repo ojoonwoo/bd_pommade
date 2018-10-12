@@ -144,15 +144,21 @@ html, body {
 	font-size: 22px;
 	color: #c498d8;
 }
-.content.main .content-wrap .inner .desc-area .neon-title {
+.content.main .content-wrap .inner .desc-area .title-wrap {
 	margin: -4px 0 0 -42px;
+	position: relative;
 }
+/*
+.content.main .content-wrap .inner .desc-area .neon-title {
+}
+*/
 .content.main .content-wrap .inner .desc-area .neon-on-title {
 	position: absolute;
 	/* top: 116px;
 	left: 44px; */
-	top: 88px;
-	left: 20px;
+/*	top: 88px;*/
+	top: -12px;
+	left: -12px;
 }
 .content.main .content-wrap .inner .desc-area .desc1 {
 	display: block;
