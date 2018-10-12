@@ -41,13 +41,15 @@
 }
 html, body {
 	min-width: 1000px;
+	height: 100%;
 	font-family: 'Noto Sans Korean';
 }
 .content.main {
 	position: relative;
 /*	background: url(../images/main_bg.png) no-repeat center 0;*/
 	background: url(../images/main_bg.png) no-repeat center bottom;
-	background-size: auto;
+/*	background-size: auto;*/
+	background-size: cover;
 	width: 100%;
 	overflow: hidden;
 }
@@ -149,7 +151,7 @@ html, body {
 	position: absolute;
 	/* top: 116px;
 	left: 44px; */
-	top: 92px;
+	top: 88px;
 	left: 20px;
 }
 .content.main .content-wrap .inner .desc-area .desc1 {
@@ -601,7 +603,7 @@ html, body {
 	font-weight: 400;
 	font-size: 17px;
 	color: #eabdff;
-	width: 74px;
+	width: 78px;
 	height: 37px;
 	background: #653c78;
 	/*	margin-right: 1px;*/
@@ -799,8 +801,9 @@ html, body {
 .content.info {
 	position: relative;
 	background: url(../images/info_bg.png) no-repeat center 0;
-	background-size: auto;
+	background-size: cover;
 	width: 100%;
+	overflow-x: hidden;
 }
 .content.info .header-wrap {
 	height: 116px;
@@ -1354,6 +1357,9 @@ z-index: -1;
 	.content.main .content-wrap .inner .desc-area .desc2 {
 		font-size: 16px;
 		line-height: 20px;
+	}
+	.content.main .content-wrap .inner .goods-area {
+		top: 131px;
 	}
 	.content.main .content-wrap .inner .btn-area {
 		margin: 37px 0 0 63px;
