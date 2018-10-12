@@ -43,8 +43,10 @@ include_once "head.php";
 				<div class="inner">
 					<div class="desc-area">
 						<span class="sub-text">바이오더마 포마드 -  <small>Cicabio Pommade</small></span>
-						<img src="./images/title_image.png" alt="" class="neon-title">
-						<img src="./images/title_on_image.png" alt="" class="neon-on-title">
+						<div class="title-wrap">
+							<img src="./images/title_image.png" alt="" class="neon-title">
+							<img src="./images/title_on_image.png" alt="" class="neon-on-title">
+						</div>
 						<!-- <span class="desc1">바이오더마의 특허 성분과 기술이 담긴 포마드로</span> -->
 						<span class="desc2">바이오더마의 특허 성분과 기술이 담긴 포마드로<br>불만족스러웠던 기존의 시카 A/S 받으세요<i>!</i></span>
 					</div>
