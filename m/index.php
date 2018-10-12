@@ -32,7 +32,7 @@
 							</div>
 						</div>
 						<div class="desc-area">
-							<span class="sub-text">바이오더마 포마드 -  <small>Cicabio Pommade</small></span>
+							<span class="sub-text">시카비오 포마드 -  <small>Cicabio Pommade</small></span>
 							<div class="title-wrap">
 								<img src="./images/neon_title.png" alt="" class="neon-title">
 								<img src="./images/neon_light.png" alt="" class="neon-on-title">
