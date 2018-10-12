@@ -57,7 +57,7 @@
                         </a>
                     </div>
                     <div>
-                        <img src="./images/info_product.png" alt="">
+                        <img src="./images/info_product.png" alt="" style="display: block; margin: 0 auto;">
                     </div>
 <?
     // include_once "share_area.php";

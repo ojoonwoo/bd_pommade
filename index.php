@@ -19,7 +19,7 @@ if ($mobileYN == "MOBILE")
 include_once "head.php";
 ?>
 <body>
-	<div class="container">
+	<div class="container" style="height: 100%;">
 		<div class="content main">
 			<div class="header-wrap">
 				<div class="inner">
