@@ -51,7 +51,8 @@
                         <p>전국 올리브영 매장 바이오더마 코너에서 만나 보실 수 있습니다</p>
                     </div>
                     <div class="btn-area">
-                        <a href="sub.php" onclick="gtag('event','click',{'event_label':'포마드A/S경험하기','event_category':'info'});">
+                        <a href="http://www.oliveyoung.co.kr/store/goods/getGoodsDetail.do?goodsNo=A000000117811&dispCatNo=1000001000100010004" target="_blank"  onclick="gtag('event','click',{'event_label':'포마드A/S경험하기','event_category':'info'});">
+                       <!-- <a href="sub.php" onclick="gtag('event','click',{'event_label':'포마드A/S경험하기','event_category':'info'});"> -->
                             <button type="button">포마드로 A/S 경험하기</button>
                         </a>
                     </div>
