@@ -42,7 +42,7 @@ include_once "head.php";
 			<div class="content-wrap">
 				<div class="inner">
 					<div class="desc-area">
-						<span class="sub-text">바이오더마 포마드 -  <small>Cicabio Pommade</small></span>
+						<span class="sub-text">시카비오 포마드 -  <small>Cicabio Pommade</small></span>
 						<div class="title-wrap">
 							<img src="./images/title_image.png" alt="" class="neon-title">
 							<img src="./images/title_on_image.png" alt="" class="neon-on-title">
