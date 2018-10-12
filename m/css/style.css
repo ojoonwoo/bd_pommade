@@ -586,6 +586,7 @@ html, body {
 	text-align: center;
 	letter-spacing: -1px;
 	margin: 5px 0 20px 0;
+	font-family: 'NotoSansKR-DemiLight';
 }
 .content.sub .footer-wrap {
 /*	background: rgba(79, 31, 103, 0.26);*/

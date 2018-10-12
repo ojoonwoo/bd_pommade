@@ -41,6 +41,7 @@
 }
 html, body {
 	min-width: 1000px;
+	font-family: 'Noto Sans Korean';
 }
 .content.main {
 	position: relative;
@@ -234,6 +235,7 @@ html, body {
 	font-size: 12px;
 	color: #fff;
 	color: rgba(255, 255, 255, 0.5);
+	font-family: 'Noto Sans Korean';
 	/* color: #686868; */
 }
 .content.main .footer-wrap .inner p:last-child {
@@ -763,6 +765,7 @@ html, body {
 	font-size: 12px;
 	color: #fff;
 	margin: 10px 0 30px 0;
+	font-family: 'Noto Sans Korean';
 }
 
 .content.sub .content-wrap .inner .share-area .fb {
