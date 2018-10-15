@@ -206,7 +206,7 @@ function info_submit() {
 	var mb_mail			= mb_mail1 + "@" + mb_mail2;
 
 	console.log(claimType);
-	if ($(".check").is(":checked") === false) {
+	if ($(".claimCheck").is(":checked") === false) {
 		alert("기존에 사용했던 시카제품의 불만족스런 이유를 선택해 주세요");
 		return false;
 	}

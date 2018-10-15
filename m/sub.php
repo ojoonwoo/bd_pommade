@@ -28,7 +28,7 @@
 									<ul class="check-list">
 										<li>
 											<div class="check-wrap checkType">
-												<input type="checkbox" class="check" id="q1_chk1" data-value="1" data-name="진정력">
+												<input type="checkbox" class="check claimCheck" id="q1_chk1" data-value="1" data-name="진정력">
 												<label for="q1_chk1"></label>
 												<span>진정력</span>
 											</div>
@@ -43,7 +43,7 @@
 										</li>
 										<li>
 											<div class="check-wrap checkType">
-												<input type="checkbox" class="check" id="q1_chk2" data-value="2" data-name="발림성">
+												<input type="checkbox" class="check claimCheck" id="q1_chk2" data-value="2" data-name="발림성">
 												<label for="q1_chk2"></label>
 												<span>발림성</span>
 											</div>
@@ -59,7 +59,7 @@
 										</li>
 										<li>
 											<div class="check-wrap checkType">
-												<input type="checkbox" class="check" id="q1_chk3" data-value="3" data-name="수분도">
+												<input type="checkbox" class="check claimCheck" id="q1_chk3" data-value="3" data-name="수분도">
 												<label for="q1_chk3"></label>
 												<span>수분도</span>
 											</div>
@@ -75,7 +75,7 @@
 										</li>
 										<li style="margin-bottom:5px">
 											<div class="check-wrap checkType">
-												<input type="checkbox" class="check" id="q1_chk4" data-value="4" data-name="손상케어">
+												<input type="checkbox" class="check claimCheck" id="q1_chk4" data-value="4" data-name="손상케어">
 												<label for="q1_chk4"></label>
 												<span>손상케어</span>
 											</div>
