@@ -211,7 +211,7 @@ function info_submit() {
 		return false;
 	}
 
-	if (claim_goods == "") {
+	if (claim_goods == "" || claim_goods == "없음") {
 		alert("불만족스런 시카제품을 입력해주세요.");
 		$("#claim_goods").focus();
 		return false;
