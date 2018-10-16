@@ -195,7 +195,7 @@ function info_submit() {
 		return false;
 	}
 
-	if (claim_goods == "") {
+	if (claim_goods == "" || claim_goods == "없음") {
 		alert("불만족스런 시카제품을 입력해주세요.");
 		$("#claim_goods").focus();
 		return false;
@@ -506,7 +506,7 @@ function sns_share(media, flag)
 				title: '',
 				description: '불만족스러웠던 기존의 시카 제품들,\n해결되지 않던 당신의 피부 고민!\n바이오더마의 특허 성분과 기술이 담긴\n포마드로 A/S 받으세요!',
 				// description: '#케익 #딸기 #삼평동 #카페 #분위기 #소개팅',
-				imageUrl: "http://www.pommadecare.com/images/kakao_share2.jpg",
+				imageUrl: "http://www.pommadecare.com/images/kakao_share3.jpg",
 				link: {
 					mobileWebUrl: 'http://www.pommadecare.com/m/index.php?media=share_fb',
 					webUrl: 'http://www.pommadecare.com/?media=share_fb'
