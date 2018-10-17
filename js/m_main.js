@@ -272,6 +272,14 @@ function info_submit(btn) {
 		return false;
 	}
 	
+	if(!claimType) {
+		$('.checkType .claimCheck').each(function() {
+			if($(this).is(':checked')) {
+				claimType = $(this).attr('data-value');
+			}
+		});
+	}
+	
 	$(btn).attr('disabled', true);
 	
 

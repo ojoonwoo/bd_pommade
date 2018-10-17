@@ -208,7 +208,7 @@
             })
             claimType	= $(this).data("value");
             claimName	= $(this).data("name");
-    		// console.log(claimType);
+    		console.log(claimType);
 		});
     });
 		
