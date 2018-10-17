@@ -1,3 +1,5 @@
+var search_zipcode	= "";
+var search_addr1	= "";
 
 $(function(){
 
@@ -13,7 +15,7 @@ $(function(){
 
 	Kakao.init('f5ac4c6fbfcacd558c57ec5a05738a4e');
 
-
+	
 	var agree1 	= "N";
 	var agree2 	= "N";
 
@@ -131,8 +133,7 @@ $(function(){
 					fullAddr += (extraAddr !== '' ? ' ('+ extraAddr +')' : '');
 				}
 	
-				zipcode	= data.zonecode;
-				addr1		= fullAddr;
+				var addr1		= fullAddr;
 				// document.getElementById('mb_zipcode').value = data.zonecode; //5자리 새우편번호 사용
 				// document.getElementById('mb_addr1').value = "("+zipcode+") "+addr1;
 				// document.getElementById('mb_addr1').value = addr1;
@@ -192,7 +193,7 @@ $(function(){
 	}
 });
 
-function info_submit() {
+function info_submit(btn) {
 	var claim_goods 	= $("#claim_goods").val();
 	var mb_name 		= $("#mb_name").val();
 	var mb_phone1 		= $("#mb_phone1").val();
@@ -204,6 +205,8 @@ function info_submit() {
 	var mb_addr2 		= $("#mb_addr2").val();
 	var mb_phone 		= mb_phone1 + mb_phone2 + mb_phone3;
 	var mb_mail			= mb_mail1 + "@" + mb_mail2;
+	
+	search_addr1 = search_addr1 || mb_addr1;
 
 	console.log(claimType);
 	if ($(".claimCheck").is(":checked") === false) {
@@ -211,13 +214,13 @@ function info_submit() {
 		return false;
 	}
 
-	if (claim_goods == "" || claim_goods == "없음") {
+	if (claim_goods == "" || claim_goods == "없음" || claim_goods.trim().length < 1) {
 		alert("불만족스런 시카제품을 입력해주세요.");
 		$("#claim_goods").focus();
 		return false;
 	}
 
-	if (mb_name == "") {
+	if (mb_name == "" || mb_name.trim().length < 1) {
 		alert("이름을 입력해 주세요.");
 		$("#mb_name").focus();
 		return false;
@@ -239,20 +242,20 @@ function info_submit() {
 		$("#mb_phone3").focus();
 		return false;
 	}
-	if (mb_addr1 == "") {
+	if (mb_addr1 == "" || mb_addr1.trim().length < 1) {
 		alert("주소를 입력해 주세요.");
 		return false;
 	}
-	if (mb_addr2 == "") {
+	if (mb_addr2 == "" || mb_addr2.trim().length < 1) {
 		alert("상세주소를 입력해 주세요.");
 		$("#mb_addr2").focus();
 		return false;
 	}
-	if (mb_mail1 == "") {
+	if (mb_mail1 == "" || mb_mail1.trim().length < 1) {
 		alert("메일주소를 입력해주세요");
 		return false;
 	}
-	if (mb_mail2 == "") {
+	if (mb_mail2 == "" || mb_mail2.trim().length < 1) {
 		alert("메일주소를 입력해주세요");
 		return false;
 	}
@@ -268,6 +271,9 @@ function info_submit() {
 		alert('개인정보 취급 위탁 약관에 동의하셔야만 이벤트 참여가 가능합니다.');
 		return false;
 	}
+	
+	$(btn).attr('disabled', true);
+	
 
 	$.ajax({
 		type:"POST",

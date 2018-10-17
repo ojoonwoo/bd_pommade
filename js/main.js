@@ -1,3 +1,5 @@
+var search_zipcode	= "";
+var search_addr1	= "";
 
 $(function(){
 	
@@ -176,7 +178,7 @@ $(function(){
 
 });
 
-function info_submit() {
+function info_submit(btn) {
 	var claim_goods 	= $("#claim_goods").val();
 	var mb_name 		= $("#mb_name").val();
 	var mb_phone1 		= $("#mb_phone1").val();
@@ -188,6 +190,8 @@ function info_submit() {
 	var mb_addr2 		= $("#mb_addr2").val();
 	var mb_phone 		= mb_phone1 + mb_phone2 + mb_phone3;
 	var mb_mail			= mb_mail1 + "@" + mb_mail2;
+	
+	search_addr1 = search_addr1 || mb_addr1;
 // console.log(cutStr(claim_goods));
 // return false;
 	if ($(".check").is(":checked") === false) {
@@ -195,48 +199,48 @@ function info_submit() {
 		return false;
 	}
 
-	if (claim_goods == "" || claim_goods == "없음") {
+	if (claim_goods == "" || claim_goods == "없음" || claim_goods.trim().length < 1) {
 		alert("불만족스런 시카제품을 입력해주세요.");
 		$("#claim_goods").focus();
 		return false;
 	}
 
-	if (mb_name == "") {
+	if (mb_name == "" || mb_name.trim().length < 1) {
 		alert("이름을 입력해 주세요.");
 		$("#mb_name").focus();
 		return false;
 	}
 
-	if (mb_phone1 == "") {
+	if (mb_phone1 == "" || mb_phone1.trim().length < 1) {
 		alert("전화번호를 입력해 주세요.");
 		$("#mb_phone1").focus();
 		return false;
 	}
 	
-	if (mb_phone2 == "") {
+	if (mb_phone2 == "" || mb_phone2.trim().length < 1) {
 		alert("전화번호를 입력해 주세요.");
 		$("#mb_phone2").focus();
 		return false;
 	}
-	if (mb_phone3 == "") {
+	if (mb_phone3 == "" || mb_phone3.trim().length < 1) {
 		alert("전화번호를 입력해 주세요.");
 		$("#mb_phone3").focus();
 		return false;
 	}
-	if (mb_addr1 == "") {
+	if (mb_addr1 == "" || mb_addr1.trim().length < 1) {
 		alert("주소를 입력해 주세요.");
 		return false;
 	}
-	if (mb_addr2 == "") {
+	if (mb_addr2 == "" || mb_addr2.trim().length < 1) {
 		alert("상세주소를 입력해 주세요.");
 		$("#mb_addr2").focus();
 		return false;
 	}
-	if (mb_mail1 == "") {
+	if (mb_mail1 == "" || mb_mail1.trim().length < 1) {
 		alert("메일주소를 입력해주세요");
 		return false;
 	}
-	if (mb_mail2 == "") {
+	if (mb_mail2 == "" || mb_mail2.trim().length < 1) {
 		alert("메일주소를 입력해주세요");
 		return false;
 	}
@@ -252,6 +256,9 @@ function info_submit() {
 		alert('개인정보 취급 위탁 약관에 동의하셔야만 이벤트 참여가 가능합니다.');
 		return false;
 	}
+	
+	$(btn).attr('disabled', true);
+	
 
 	$.ajax({
 		type:"POST",

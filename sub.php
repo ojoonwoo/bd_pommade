@@ -151,7 +151,7 @@
                             </div>
                         </div>
                         <div class="btn-box">
-                            <button type="button" onclick="info_submit();gtag('event','click',{'event_label':'A/S신청완료','event_category':'event'});return false;">A/S 신청 접수</button>
+                            <button type="button" onclick="info_submit(this);gtag('event','click',{'event_label':'A/S신청완료','event_category':'event'});return false;">A/S 신청 접수</button>
                         </div>
                         <div class="extra-notice">
                             <span>A/S는 포마드 샘플 소진 시까지만 진행됩니다</span>
@@ -180,8 +180,7 @@
     <script>
     var claimType = "";
     var claimName = "";
-    var search_zipcode	= "";
-    var search_addr1	= "";
+
     $(window).on('load', function() {
     	// $('#sample-btn').trigger('click');
 

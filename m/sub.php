@@ -125,7 +125,7 @@
 								<div class="input-group addr">
 									<div class="guide">주 소</div>
 									<div class="input">
-										<input type="text"  id="mb_addr1" readonly>
+										<input type="text" id="mb_addr1" readonly>
 										<button class="find-addr"></button>
 									</div>
 								</div>
@@ -175,7 +175,7 @@
 								</div>
 								<div class="msg">입력하신 정보로 경품이 발송되니 정확하게 입력해주세요 <br>부정확한 정보 입력으로 경품 미발송은 책임지지 않습니다</div>
 							</div>
-							<button class="btn-submit" onclick="info_submit();return false;">
+							<button class="btn-submit" onclick="info_submit(this);return false;">
 								A/S 신청 접수
 							</button>
 							<div class="extra-notice">
@@ -208,8 +208,6 @@
 		<script>
 			var claimType = "";
 			var claimName = "";
-			var search_zipcode	= "";
-			var search_addr1	= "";
 
 			$(window).on('load', function() {
 				// $('#sample-btn').trigger('click');
@@ -241,7 +239,7 @@
 					})
 					claimType	= $(this).data("value");
 					claimName	= $(this).data("name");
-					console.log(claimType);
+//					console.log(claimType);
 				});
 			});
 			$('#email-select').on('change', function() {
