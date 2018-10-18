@@ -775,6 +775,9 @@ html, body {
 	margin: 10px 0 30px 0;
 	font-family: 'Noto Sans Korean';
 }
+.content.sub .content-wrap .inner .input-area .extra-notice span {
+	display: block;
+}
 
 .content.sub .content-wrap .inner .share-area .fb {
 	background: url(../images/share_fb.png) no-repeat center 0;

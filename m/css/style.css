@@ -588,6 +588,9 @@ html, body {
 	margin: 5px 0 20px 0;
 	font-family: 'NotoSansKR-DemiLight';
 }
+.content.sub .receipt-form .extra-notice span {
+	display: block;
+}
 .content.sub .footer-wrap {
 /*	background: rgba(79, 31, 103, 0.26);*/
 	background: rgb(79, 31, 103);

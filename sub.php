@@ -155,6 +155,7 @@
                         </div>
                         <div class="extra-notice">
                             <span>A/S는 포마드 샘플 소진 시까지만 진행됩니다</span>
+							<span>동일인으로 추정될 경우 최초 참여 내역에만 발송이 진행됩니다</span>
                         </div>
                     </div>
 <?
