@@ -36,9 +36,9 @@
 							</div>
 						</div>
 						<div class="desc-text">
-							<p class="top-desc">가까운 올리브영 매장을 방문하여 빠르게 A/S를 경험해보세요!</p>
+							<p class="top-desc">자사몰 및 일부 올리브영 매장에서 빠르게 A/S를 경험해보세요!</p>
 							<p>기존 시카 제품의 불만족스러운 부분을 개선해주는 포마드는</p>
-							<p>전국 올리브영 매장 바이오더마 코너에서 만나 보실 수 있습니다</p>
+							<p>자사몰 및 전국 올리브영 매장 바이오더마 코너에서 만나 보실 수 있습니다</p>
 						</div>
 						<div class="btn-area">
 							<a href="http://www.oliveyoung.co.kr/store/goods/getGoodsDetail.do?goodsNo=A000000117811&dispCatNo=1000001000100010004" target="_blank">
