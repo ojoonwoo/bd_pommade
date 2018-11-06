@@ -933,9 +933,11 @@ html, body {
 .content.info .content-wrap .inner .sale-image .sale-text {
 	position: relative;
 	z-index: 2;
+	margin-bottom: 31px;
 }
 .content.info .content-wrap .inner .sale-image .store {
-	margin-top: -96px;
+/*	margin-top: -96px;*/
+	margin-right: -83px;
 }
 .content.info .content-wrap .inner .desc-text {
 	padding-top: 30px;

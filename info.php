@@ -31,12 +31,14 @@
                         <img src="./images/info_title.png" alt="">
                         <img src="./images/info_title_on.png" alt="" class="neon-on-title">
                     </div>
+<!--
                     <div class="desc-title">
                         <span>단 3주 동안만 진행되는 포마드 특별 A/S</span>
                     </div>
                     <div class="event-date">
                         <span>2018. 10. 14  –  2018. 11. 05</span>
                     </div>
+-->
                     <div class="sale-image">
                         <div class="sale-text">
                             <img src="./images/info_sale_text.png" alt="">
