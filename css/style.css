@@ -906,11 +906,12 @@ html, body {
 .content.info .content-wrap .inner .desc-title {
 	font-family: 'Noto Sans Korean';
 	font-style: normal;
-	font-weight: 700;
-	font-size: 18px;
+	font-weight: 900;
+	font-size: 22px;
 	color: #fff;
-	padding: 23px 0 19px 0;
-	letter-spacing: 1.4px;
+/*	padding: 23px 0 19px 0;*/
+	padding: 23px 0 22px 0;
+	letter-spacing: -0.1px;
 }
 .content.info .content-wrap .inner .event-date {
 	width: 236px;
@@ -928,7 +929,7 @@ html, body {
 	display: inline-block;
 }
 .content.info .content-wrap .inner .sale-image {
-	padding: 25px 0 0 0;
+/*	padding: 25px 0 0 0;*/
 }
 .content.info .content-wrap .inner .sale-image .sale-text {
 	position: relative;

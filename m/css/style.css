@@ -632,9 +632,11 @@ html, body {
 .content.info .desc-title {
 	text-align: center;
 	font-family: 'NotoSansKR-Medium';
+	font-weight: 700;
 	font-size: 15px;
 	color: #ffffff;
 	letter-spacing: -0.5px;
+	padding: 7px 0 15px;
 }
 .content.info .event-date {
 	width: 150px;

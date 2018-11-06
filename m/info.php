@@ -21,10 +21,10 @@
 							<img src="./images/info_neon_title.png" alt="" class="neon-title">
 							<img src="./images/info_neon_light.png" alt="" class="neon-on-title">
 						</div>
-<!--
 						<div class="desc-title">
-							<span>단 3주 동안만 진행되는 포마드 특별 A/S</span>
+							<span>한정 기간 동안만 진행되는 포마드 특별 A/S</span>
 						</div>
+<!--
 						<div class="event-date">
 							<span>2018. 10. 14  –  2018. 11. 05</span>
 						</div>
@@ -43,7 +43,7 @@
 							<p>자사몰 및 전국 올리브영 매장 바이오더마 코너에서 만나 보실 수 있습니다</p>
 						</div>
 						<div class="btn-area">
-							<a href="http://www.oliveyoung.co.kr/store/goods/getGoodsDetail.do?goodsNo=A000000117811&dispCatNo=1000001000100010004" target="_blank">
+							<a href="http://www.bioderma.co.kr/front/product_view.php?id=028003DD" target="_blank">
 								<button type="button">포마드로 A/S 경험하기</button>
 							</a>
 						</div> 
